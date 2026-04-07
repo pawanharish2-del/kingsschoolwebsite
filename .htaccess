@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# 1. Remove .html extension from the visible URL
+# If a user types /page.html, it redirects them to /page
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# 2. Serve the .html file internally
+# If a user visits /page, the server internally loads /page.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]

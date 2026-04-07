@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Admission Enquiry | Kings Court World School Mansarovar, Jaipur | Pre-Primary to Class 3</title>
+    <meta name="description" content="Enroll your child at Kings Court World School, Mansarovar, Jaipur. Offering a holistic curriculum for Playgroup to Class 3. Fill out our online admission enquiry form today for excellence in early education at Suraj Vatika, Golyawas.">
+    <meta name="keywords" content="Kings Court World School Jaipur, School Admission Mansarovar, Best Pre-Primary School Jaipur, Class 3 Admission Jaipur, Kings Court World School Enquiry,">
+    <meta name="author" content="Kings Court World School">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/favKCWS.png">
+    <link rel="apple-touch-icon" href="/favKCWS.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Exact Google Logo Theme Colors - NO VARIATIONS */
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+            
+            /* Core Mapping */
+            --primary: var(--google-blue);
+            --secondary: var(--google-red);
+            --accent: var(--google-yellow);
+            
+            --dark: #202124;         
+            --light: #F8F9FA;        
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bubblegum Sans', cursive;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        /* --- Top Bar --- */
+        .top-bar {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .top-bar a:hover {
+            color: var(--accent);
+        }
+
+        .top-bar-right.social-top {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-bar-right.social-top a {
+            font-size: 1.1rem;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 5%;
+            background: rgba(255, 255, 255, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-item { position: relative; }
+        .nav-item > a {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 0;
+            display: block;
+        }
+        .nav-item > a:hover { color: var(--google-red); }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%; left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            padding: 10px 0;
+            z-index: 9999;
+            border-top: 4px solid var(--google-green);
+            list-style: none; /* REMOVES DOTS */
+            margin: 0; /* REMOVES DEFAULT SPACING */
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-item:hover .dropdown-menu { display: block; animation: fadeInUp 0.3s ease; }
+        .dropdown-menu li a { padding: 8px 20px; display: block; font-size: 0.9rem; color: #555; }
+        .dropdown-menu li a:hover { background: var(--light); color: var(--google-blue); padding-left: 25px; }
+
+        .cta-btn {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(0,0,0,0.2); }
+
+        /* --- Sticky Sidebar --- */
+        #side-quick-links { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 999; }
+        #side-quick-links ul { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; list-style: none; }
+        #side-quick-links ul li {
+            background: var(--white); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
+            box-shadow: -2px 5px 15px rgba(0,0,0,0.15); transition: all 0.3s;
+            border-top-left-radius: 25px; border-bottom-left-radius: 25px; overflow: hidden; cursor: pointer;
+        }
+        
+        #side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
+        #side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
+        #side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
+        
+        #side-quick-links ul li a { display: flex; align-items: center; width: 100%; height: 100%; text-decoration: none; }
+        
+        #side-quick-links ul li.call i { color: var(--google-blue); }
+        #side-quick-links ul li.marker i { color: var(--google-red); }
+        #side-quick-links ul li.whatapp i { color: var(--google-green); }
+        
+        #side-quick-links i { font-size: 1.2rem; min-width: 50px; text-align: center; transition: 0.3s; }
+        #side-quick-links ul li:hover i { color: white; }
+        #side-quick-links .content { white-space: nowrap; color: white; opacity: 0; transition: 0.3s; }
+        #side-quick-links ul li:hover .content { opacity: 1; }
+
+        /* --- Inner Banner --- */
+        .inner-banner {
+            position: relative;
+            height: 35vh;              /* Increased height */
+            min-height: 280px;         /* Increased minimum height */
+            background-color: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 40px;
+            padding-bottom: 70px;      /* Pushes text safely above the wave */
+        }
+
+        .inner-banner-content {
+            z-index: 10;
+            position: relative;
+            animation: popIn 1s ease-out;
+            padding: 0 20px;
+            margin-bottom: 40px;       /* Extra breathing room from the wave */
+        }
+
+        .inner-banner h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 5px;
+            color: var(--google-yellow);
+        }
+        
+        .inner-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-family: 'Fredoka', sans-serif;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+        }
+
+        /* Banner Clouds */
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.6;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 25s; }
+        .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+        .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
+        .cloud.two { width: 120px; height: 50px; top: 30%; right: -120px; animation-duration: 30s; animation-direction: reverse; }
+        .cloud.two::after { width: 60px; height: 60px; top: -30px; left: 20px; }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* Wave Divider */
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        .wave-container svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- Enquiry Section Design --- */
+        .enquiry-section {
+            padding: 6rem 5%;
+            position: relative;
+            background: var(--light);
+            background-image: radial-gradient(#ccc 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Decorative Shapes in Background */
+        .shape-blob {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.1;
+        }
+        .blob-1 { top: 10%; left: -5%; color: var(--google-blue); font-size: 20rem; }
+        .blob-2 { bottom: 10%; right: -5%; color: var(--google-red); font-size: 25rem; }
+
+        .enquiry-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Playful Image Gallery (Left Side) */
+        .enquiry-images {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .enquiry-img-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 8px solid white;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        /* Rotated "Polaroid" Effect */
+        .enquiry-img-card:nth-child(1) {
+            transform: rotate(-3deg);
+            z-index: 2;
+        }
+        .enquiry-img-card:nth-child(2) {
+            transform: rotate(3deg) translateX(10px);
+            z-index: 1;
+            margin-top: -30px;
+        }
+
+        .enquiry-img-card:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 5;
+        }
+
+        .enquiry-img-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Form Container Design */
+        .form-container {
+            background: var(--white);
+            padding: 3.5rem;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            position: relative;
+            border-top: 10px solid var(--google-green);
+        }
+
+        /* Floating Badge decoration on form */
+        .form-container::after {
+            content: '\f1d8';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: -30px;
+            right: 40px;
+            background: var(--google-yellow);
+            color: var(--dark);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .form-heading { text-align: center; margin-bottom: 2.5rem; }
+        .form-heading h3 { 
+            color: var(--google-blue); 
+            font-size: 2.5rem; 
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+            border-bottom: 4px solid var(--google-yellow);
+            padding-bottom: 5px;
+        }
+        
+        .form-heading p { color: #666; font-size: 1.1rem; margin-top: 10px; }
+
+        .form-group { margin-bottom: 1.5rem; position: relative; }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #eee;
+            border-radius: 20px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            color: #444;
+            background: #fdfdfd;
+            transition: all 0.3s;
+        }
+
+        .form-control::placeholder { color: #aaa; }
+
+        .form-control:focus {
+            border-color: var(--google-blue);
+            outline: none;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        select.form-control {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234285F4' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--google-blue);
+            color: white;
+            border: none;
+            padding: 1.2rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 rgba(0,0,0,0.2);
+            transition: all 0.2s;
+            font-family: 'Bubblegum Sans', cursive;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 0 rgba(0,0,0,0.2);
+            background-color: var(--google-blue); 
+        }
+        
+        .submit-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #4285f4;
+            color: white;
+            padding: 4rem 5% 2rem 5%;
+            position: relative;
+            margin-top: 2rem;
+        }
+        
+        .footer-wave {
+            position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        .footer-wave svg { display: block; width: calc(100% + 1.3px); height: 80px; }
+        .footer-wave path { fill: var(--light); }
+
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        .footer-col { flex: 1; min-width: 250px; }
+        .footer-col h3 { color: var(--google-yellow); margin-bottom: 1.5rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.8rem; }
+        .footer-col a { color: #ccc; }
+        .footer-col a:hover { color: var(--google-blue); }
+
+        /* Social Links & Copyright Fixes */
+        .social-links a {
+            display: inline-flex; 
+            width: 35px; 
+            height: 35px; 
+            background: rgba(255, 255, 255, 0.2); /* More visible circle */
+            color: white; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover { 
+            background: white; 
+            color: var(--google-blue); /* Icon turns blue */
+            transform: translateY(-3px); /* Pop effect */
+        }
+
+        .copyright {
+            text-align: center; 
+            margin-top: 3rem; 
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2); 
+            font-size: 0.9rem; 
+            color: #ffffff; /* Bright white text */
+            opacity: 0.9;
+        }
+
+        /* Mobile Menu */
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: var(--google-blue); margin-left: auto; padding-right: 10px; }
+        
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            /* Mobile Nav Fixes */
+            .logo { max-width: 75%; }
+            .logo img { max-width: 100%; height: auto !important; }
+            .hamburger { display: block; margin-left: auto; padding-left: 15px; padding-right: 0; }
+            
+            .nav-links {
+                display: none; flex-direction: column; position: absolute;
+                top: 100%; left: 0; width: 100%; background: white; padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .dropdown-menu { position: static; box-shadow: none; padding-left: 20px; border-top: none; background: #f9f9f9; }
+            
+            .top-bar { justify-content: space-between; padding: 10px 5%; }
+            .top-bar-right { display: none; }
+            .enquiry-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .enquiry-images { flex-direction: row; justify-content: center; }
+            .enquiry-img-card { flex: 0 0 45%; }
+            .enquiry-img-card:nth-child(2) { margin-top: 0; transform: rotate(3deg); }
+        }
+
+        /* Small Devices / Phones */
+        @media (max-width: 768px) {
+            .enquiry-section { padding: 4rem 5%; }
+            .inner-banner h1 { font-size: 2.5rem; }
+            .form-container { padding: 2rem 1.5rem; border-radius: 25px; }
+            .enquiry-images { flex-direction: column; align-items: center; }
+            .enquiry-img-card { width: 100%; max-width: 400px; margin-bottom: 1rem; }
+            .enquiry-img-card:nth-child(2) { margin-top: -20px; }
+            .form-heading h3 { font-size: 2rem; }
+            
+            #side-quick-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="side-quick-links">
+        <ul>
+            <li class="call">
+                <a href="tel:+917665083556">
+                    <i class="fa fa-phone"></i>
+                    <div class="content">+91-76650 83556</div>
+                </a>
+            </li>
+            <li class="marker">
+                <a href="enquiry.html">
+                    <i class="fa fa-file-lines"></i>
+                    <div class="content">Apply Now</div>
+                </a>
+            </li>
+            <li class="whatapp">
+                <a href="https://wa.me/917665083556" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="content">WhatsApp</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:+917665083556"><i class="fa fa-phone"></i> +91-76650 83556</a>
+        </div>
+        <div class="top-bar-right social-top">
+            <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="about.html">About us</a></li>
+            
+            <li class="nav-item">
+                <a href="javascript:void(0)">Programs <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="playgroup_jal.html">Playgroup – Jal</a></li>
+                    <li><a href="nursery_agni.html">Nursery – Agni</a></li>
+                    <li><a href="junior_kg_vayu.html">Junior KG – Vayu</a></li>
+                    <li><a href="senior_kg_akash.html">Senior KG – Akash</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="enquiry.html">Admissions</a></li>
+            
+            <li class="nav-item"><a href="gallery.php">Gallery</a></li>
+            <li class="nav-item"><a href="blog.html">Blogs</a></li>
+                
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li><a href="enquiry.html" class="cta-btn">Apply Online</a></li>
+        </ul>
+    </nav>
+
+    <section class="inner-banner">
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+        
+        <div class="inner-banner-content">
+            <h1>Enquire Now</h1>
+            <p>Please fill the below mentioned details to complete the enquiry process.</p>
+        </div>
+
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="enquiry-section">
+        <i class="fa-solid fa-shapes shape-blob blob-1"></i>
+        <i class="fa-solid fa-cloud shape-blob blob-2"></i>
+
+        <div class="enquiry-grid">
+            
+            <div class="enquiry-images">
+                <div class="enquiry-img-card">
+                    <img src="gallery/48da970f-0772-4d6c-91a2-cb8780f96d93.jpg" alt="Students Learning">
+                </div>
+                <div class="enquiry-img-card">
+                    <img src="gallery/664ea7a3-e720-422a-ba72-68c295ac1378.jpg" alt="School Activities">
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-heading">
+                    <h3>Enquire Now</h3>
+                    <p>Start your child's journey with Kings Court World School</p>
+                </div>
+
+                <form id="admissionform" method="POST" action="mail.html">
+                    <div class="form-group">
+                        <input type="text" name="childname" class="form-control" id="childname" placeholder="Name of the child *" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="parentname" class="form-control" id="parentname" placeholder="Parent/ Guardian name">
+                    </div>
+
+                    <div class="form-group">
+                        <input name="date" id="date" type="text" class="form-control" placeholder="Date of birth *" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select name="class" class="form-control" id="class">
+                            <option value="" disabled selected hidden>Class to which admission is sought</option>
+                            <option value="Playgroup">Play Group</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="K.G">KG</option>
+                            <option value="Prep">HKG</option>
+                            <option value="First">I</option>
+                            <option value="Second">II</option>
+                            <option value="Third">III</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="phone" id="Mobile" placeholder="Contact number *" required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="submit-btn">Submit Enquiry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1rem;">
+                    <img src="/Footerlogo.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="tel:+917665083556"><i class="fa fa-phone"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="enquiry.html">Enroll Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Prospectus</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Plot no.- 5, Kings lane, Suraj Vatika, Golyawas, Vandemataram Circle, Mansarovar, Jaipur -302020</li>
+                    <li><i class="fas fa-phone"></i> +91-76650 83556</li>
+                    <li><i class="fas fa-envelope"></i> kingscourtworldschool@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2026 Kings Court World School</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Toggle dropdown on mobile click
+        const dropdownToggles = document.querySelectorAll('.nav-item > a');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if(window.innerWidth <= 992) {
+                    const dropdown = this.nextElementSibling;
+                    if(dropdown && dropdown.classList.contains('dropdown-menu')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

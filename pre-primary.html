@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pre-Primary Education & Kindergarten | Kings Court World School</title>
+    <meta name="description" content="Discover Mansarovar-Jaipur's only Kindergarten offering an Inquiry-Based, Reggio-Emilia & Montessori curriculum at affordable fees. Playgroup to Senior KG.">
+    <meta name="keywords" content="Pre-Primary School Jaipur, Kindergarten Mansarovar, Reggio Emilia Curriculum Jaipur, Montessori School, Playgroup Admission, Nursery Admission, KCWS Kindergarten, VA Schools Education System">
+    <meta name="author" content="Kings Court World School">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/favKCWS.png">
+    <link rel="apple-touch-icon" href="/favKCWS.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Google Logo Theme Colors */
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+            
+            /* Core Mapping */
+            --primary: var(--google-blue);
+            --secondary: var(--google-red);
+            --accent: var(--google-yellow);
+            
+            --dark: #202124;         /* Google Dark Grey */
+            --light: #F8F9FA;        /* Google Light Grey */
+            --sky-top: var(--google-blue);
+            --sky-bottom: #8AB4F8;   /* Lighter shade of Google Blue */
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Bubblegum Sans', cursive; letter-spacing: 1px; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s; }
+
+        /* --- Scroll Reveal Animation --- */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- Top Bar & Nav --- */
+        .top-bar { background-color: var(--primary); color: white; padding: 8px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: relative; z-index: 1001; }
+        .top-bar a:hover { color: var(--accent); }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 5%; background: rgba(255, 255, 255, 0.95); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 60px; width: auto; object-fit: contain; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+        .nav-item { position: relative; }
+        .nav-item > a { color: var(--dark); font-weight: 600; font-size: 1rem; padding: 10px 0; display: block; }
+        .nav-item > a:hover { color: var(--google-red); }
+        
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: white; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 15px; padding: 10px 0; z-index: 9999; border-top: 4px solid var(--google-green); }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-item:hover .dropdown-menu { display: block; animation: fadeInUp 0.3s ease; }
+        .dropdown-menu li a { padding: 8px 20px; display: block; font-size: 0.9rem; color: #555; }
+        .dropdown-menu li a:hover { background: var(--light); color: var(--google-blue); padding-left: 25px; }
+        
+        .cta-btn { background-color: var(--primary); color: white !important; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 0 #1A73E8; display: inline-block; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #1A73E8; }
+
+        /* --- Sticky Sidebar --- */
+        #side-quick-links { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 999; }
+        #side-quick-links ul { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; list-style: none; }
+        #side-quick-links ul li { background: var(--white); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: -2px 5px 15px rgba(0,0,0,0.15); transition: all 0.3s; border-top-left-radius: 25px; border-bottom-left-radius: 25px; overflow: hidden; cursor: pointer; }
+        
+        /* Sidebar Google Colors */
+        #side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
+        #side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
+        #side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
+        
+        #side-quick-links ul li a { display: flex; align-items: center; width: 100%; height: 100%; text-decoration: none; }
+        
+        #side-quick-links ul li.call i { color: var(--google-blue); }
+        #side-quick-links ul li.marker i { color: var(--google-red); }
+        #side-quick-links ul li.whatapp i { color: var(--google-green); }
+        
+        #side-quick-links i { font-size: 1.2rem; min-width: 50px; text-align: center; transition: 0.3s; }
+        #side-quick-links ul li:hover i { color: white; }
+        #side-quick-links .content { white-space: nowrap; color: white; opacity: 0; transition: 0.3s; }
+        #side-quick-links ul li:hover .content { opacity: 1; }
+
+        /* --- Inner Banner (Playful Style - Shorter Height) --- */
+        .inner-banner {
+            position: relative;
+            height: 30vh;              /* Standardized height */
+            min-height: 220px;         /* Standardized min-height */
+            background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 40px;
+        }
+
+        .inner-banner-content {
+            z-index: 10;
+            position: relative;
+            animation: popIn 1s ease-out;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .inner-banner h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 5px;
+            color: var(--google-yellow);
+        }
+        
+        .inner-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-family: 'Fredoka', sans-serif;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+        }
+        
+        .floating-icon { position: absolute; z-index: 5; opacity: 0.9; }
+        .balloon { font-size: 3rem; color: var(--google-red); top: 20%; left: 15%; animation: floatBalloon 6s ease-in-out infinite; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); }
+        .kite { font-size: 3rem; color: var(--google-yellow); top: 30%; right: 15%; animation: floatBalloon 7s ease-in-out infinite reverse; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); }
+        @keyframes floatBalloon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+        /* Wave Separator */
+        .wave-container { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 15; }
+        .wave-container svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; /* Adjusted height */ }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- Custom Section Styles for Pre-Primary --- */
+        .section { padding: 5rem 10%; position: relative; }
+        .section-title { font-size: 2.8rem; color: var(--dark); text-align: center; margin-bottom: 3rem; line-height: 1.2; }
+        .section-title span { color: var(--google-blue); }
+        
+        .intro-text { text-align: center; max-width: 1000px; margin: 0 auto 3rem auto; font-size: 1.15rem; color: #555; line-height: 1.8; }
+        .intro-text p { margin-bottom: 15px; }
+        .intro-text strong { color: var(--dark); font-size: 1.25rem; display: block; margin-bottom: 15px; }
+        .intro-text .mission-text { font-family: 'Bubblegum Sans', cursive; font-size: 1.8rem; color: var(--google-red); margin: 25px 0; }
+
+        /* Pillars Grid - Google Colors */
+        .pillars-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 3rem; 
+            margin-top: 3rem; 
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pillar-card { 
+            background: white; 
+            padding: 3rem 2.5rem; 
+            border-radius: 25px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06); 
+            text-align: left; 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            border-bottom: 6px solid transparent; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+        }
+        .pillar-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        }
+        
+        /* Cycle Google Colors */
+        .pillar-card:nth-child(4n+1) { border-bottom-color: var(--google-blue); }
+        .pillar-card:nth-child(4n+1) .pillar-icon { background: var(--google-blue); }
+        
+        .pillar-card:nth-child(4n+2) { border-bottom-color: var(--google-red); }
+        .pillar-card:nth-child(4n+2) .pillar-icon { background: var(--google-red); }
+        
+        .pillar-card:nth-child(4n+3) { border-bottom-color: var(--google-yellow); }
+        .pillar-card:nth-child(4n+3) .pillar-icon { background: var(--google-yellow); color: var(--dark); }
+        
+        .pillar-card:nth-child(4n+4) { border-bottom-color: var(--google-green); }
+        .pillar-card:nth-child(4n+4) .pillar-icon { background: var(--google-green); }
+        
+        .pillar-icon { 
+            width: 80px; 
+            height: 80px; 
+            margin: 0 0 1.5rem 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            font-size: 2.2rem; 
+            color: white; 
+        }
+        
+        .pillar-card h3 { font-size: 1.8rem; color: var(--dark); margin-bottom: 1rem; }
+        .pillar-card p { font-size: 1.05rem; color: #555; margin-bottom: 1rem; line-height: 1.7; }
+        .pillar-card ul { margin-top: 0.5rem; padding-left: 20px; color: #555; font-size: 1rem; line-height: 1.7; flex-grow: 1; }
+        .pillar-card ul li { margin-bottom: 10px; list-style-type: square; }
+        .pillar-card .highlight-text { margin-top: 15px; font-size: 1rem; font-weight: 600; color: var(--dark); background: var(--light); padding: 15px; border-radius: 10px; }
+
+        /* Programs Timeline/Cards */
+        .programs-section { background-color: #FFFFFF; padding: 5rem 10%; border-top: 1px solid #E8EAED; border-bottom: 1px solid #E8EAED; }
+        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .prog-card { background: white; border-radius: 25px; padding: 2.5rem 2rem 2rem 2rem; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.06); position: relative; overflow: hidden; border: 2px dashed transparent; transition: all 0.3s; height: 100%; display: flex; flex-direction: column; }
+        .prog-card:hover { transform: scale(1.03); }
+        
+        .prog-badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); color: white; padding: 5px 30px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; font-weight: bold; font-family: 'Bubblegum Sans', cursive; letter-spacing: 1px; font-size: 1.2rem; }
+        
+        /* Cycle Google Colors for Programs */
+        .prog-card:nth-child(4n+1) { border-color: var(--google-blue); }
+        .prog-card:nth-child(4n+1):hover { background: #E8F0FE; }
+        .prog-card:nth-child(4n+1) .prog-badge { background: var(--google-blue); }
+        .prog-card:nth-child(4n+1) h3 { color: var(--google-blue); }
+        .prog-card:nth-child(4n+1) .prog-focus i { color: var(--google-blue); }
+        
+        .prog-card:nth-child(4n+2) { border-color: var(--google-red); }
+        .prog-card:nth-child(4n+2):hover { background: #FCE8E6; }
+        .prog-card:nth-child(4n+2) .prog-badge { background: var(--google-red); }
+        .prog-card:nth-child(4n+2) h3 { color: var(--google-red); }
+        .prog-card:nth-child(4n+2) .prog-focus i { color: var(--google-red); }
+        
+        .prog-card:nth-child(4n+3) { border-color: var(--google-yellow); }
+        .prog-card:nth-child(4n+3):hover { background: #FEF7E0; }
+        .prog-card:nth-child(4n+3) .prog-badge { background: var(--google-yellow); color: var(--dark); }
+        .prog-card:nth-child(4n+3) h3 { color: #d49a00; } /* Darker yellow for text legibility */
+        .prog-card:nth-child(4n+3) .prog-focus i { color: var(--google-yellow); }
+        
+        .prog-card:nth-child(4n+4) { border-color: var(--google-green); }
+        .prog-card:nth-child(4n+4):hover { background: #E6F4EA; }
+        .prog-card:nth-child(4n+4) .prog-badge { background: var(--google-green); }
+        .prog-card:nth-child(4n+4) h3 { color: var(--google-green); }
+        .prog-card:nth-child(4n+4) .prog-focus i { color: var(--google-green); }
+
+        .prog-card h3 { font-size: 2rem; margin: 0.5rem 0 1rem 0; }
+        .prog-card p { color: #555; font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1; }
+        .prog-focus { background: #ffffff; padding: 15px; border-radius: 15px; border: 1px solid #eee; text-align: left; font-size: 0.95rem; color: #444; }
+        .prog-focus span { color: var(--dark); font-weight: bold; display: block; margin-bottom: 5px; }
+
+        /* Process Steps */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .process-card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); text-align: center; position: relative; border-top: 5px solid transparent; transition: transform 0.3s; }
+        .process-card:hover { transform: translateY(-8px); }
+        
+        /* Cycle Google Colors for Process Steps */
+        .process-card:nth-child(4n+1) { border-top-color: var(--google-blue); }
+        .process-card:nth-child(4n+1) .process-step { background: var(--google-blue); color: white; box-shadow: 0 4px 10px rgba(66, 133, 244, 0.4); }
+        
+        .process-card:nth-child(4n+2) { border-top-color: var(--google-red); }
+        .process-card:nth-child(4n+2) .process-step { background: var(--google-red); color: white; box-shadow: 0 4px 10px rgba(234, 67, 53, 0.4); }
+        
+        .process-card:nth-child(4n+3) { border-top-color: var(--google-yellow); }
+        .process-card:nth-child(4n+3) .process-step { background: var(--google-yellow); color: var(--dark); box-shadow: 0 4px 10px rgba(251, 188, 5, 0.4); }
+        
+        .process-card:nth-child(4n+4) { border-top-color: var(--google-green); }
+        .process-card:nth-child(4n+4) .process-step { background: var(--google-green); color: white; box-shadow: 0 4px 10px rgba(52, 168, 83, 0.4); }
+
+        .process-step { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; font-family: 'Bubblegum Sans', cursive; margin: 0 auto 1rem auto; }
+        .process-card h3 { color: var(--dark); font-size: 1.4rem; margin-bottom: 1rem; }
+        .process-card p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+
+        /* Why Choose Us List */
+        .why-us-list { list-style: none; max-width: 850px; margin: 0 auto; }
+        .why-us-list li { background: white; margin-bottom: 15px; padding: 15px 25px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 15px; font-size: 1.1rem; color: var(--dark); transition: transform 0.2s; }
+        .why-us-list li:hover { transform: translateX(10px); }
+        .why-us-list li i { color: var(--google-green); font-size: 1.5rem; flex-shrink: 0; } /* Using Google Green for Checkmarks */
+
+        /* Legacy Block */
+        .legacy-block { background: var(--dark); color: white; border-radius: 30px; padding: 4rem 3rem; text-align: center; margin-top: 5rem; position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+        .legacy-block h2 { color: var(--google-yellow); margin-bottom: 1.5rem; font-size: 2.5rem; }
+        .legacy-block p { font-size: 1.1rem; max-width: 900px; margin: 0 auto 1.5rem auto; opacity: 0.95; line-height: 1.7; }
+        
+        .legacy-list { list-style: none; max-width: 800px; margin: 2rem auto 0 auto; padding: 0; text-align: left; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .legacy-list li { background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 15px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .legacy-list li i { color: var(--google-yellow); font-size: 1.2rem; }
+
+        .legacy-quote { font-family: 'Bubblegum Sans', cursive; font-size: 2rem; color: var(--google-blue); margin-top: 3rem; text-shadow: 1px 1px 0px rgba(0,0,0,0.5); }
+        .legacy-quote-sub { font-size: 1.2rem; color: white; opacity: 0.9; margin-top: 10px; font-style: italic; }
+
+        /* --- Footer --- */
+        footer { background-color: var(--dark); color: white; padding: 4rem 5% 2rem 5%; margin-top: 0; position: relative; }
+        .footer-wave { position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+        .footer-wave svg { display: block; width: calc(100% + 1.3px); height: 80px; }
+        .footer-wave path { fill: var(--light); }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        .footer-col { flex: 1; min-width: 250px; }
+        .footer-col h3 { color: var(--google-yellow); margin-bottom: 1.5rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.8rem; }
+        .footer-col a { color: #ccc; }
+        .footer-col a:hover { color: var(--google-blue); }
+        .social-links a { display: inline-flex; width: 35px; height: 35px; background: rgba(255,255,255,0.1); align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; }
+        .social-links a:hover { background: var(--google-blue); }
+        .copyright { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: #888; }
+
+        /* Mobile Menu */
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--google-blue); }
+        
+        @media (max-width: 992px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: white; padding: 1rem 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .hamburger { display: block; }
+            .dropdown-menu { position: static; box-shadow: none; padding-left: 20px; border-top: none; background: #f9f9f9; }
+            .top-bar { justify-content: center; text-align: center; gap: 10px; }
+            .top-bar-right { display: none; }
+            .legacy-block { padding: 3rem 2rem; }
+        }
+        @media (max-width: 768px) {
+            .section, .programs-section { padding: 3rem 5%; }
+            .inner-banner h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2.2rem; }
+            
+            /* Responsive update for Pillars grid on mobile */
+            .pillars-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+            .why-us-list li { font-size: 1rem; padding: 12px 20px; border-radius: 20px; }
+            .legacy-list { grid-template-columns: 1fr; }
+            #side-quick-links { display: none; }
+            .intro-text .mission-text { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="side-quick-links">
+        <ul>
+            <li class="call">
+                <a href="tel:+917665083556">
+                    <i class="fa fa-phone"></i>
+                    <div class="content">+91-76650 83556</div>
+                </a>
+            </li>
+            <li class="marker">
+                <a href="enquiry.html">
+                    <i class="fa fa-file-lines"></i>
+                    <div class="content">Apply Now</div>
+                </a>
+            </li>
+            <li class="whatapp">
+                <a href="https://wa.me/917665083556" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="content">WhatsApp</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:+917665083556"><i class="fa fa-phone"></i> +91-76650 83556</a>
+
+        </div>
+        <div class="top-bar-right">
+            <a href="mailto:kingscourtworldschool@gmail.com"><i class="fa fa-envelope"></i> kingscourtworldschool@gmail.com</a>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About us</a></li>
+            <li class="nav-item">
+                <a href="javascript:void(0)">Academics <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="pre-primary.html">Pre-Primary</a></li>
+                    <li><a href="#">Primary</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="enquiry.html">Admissions</a></li>
+            <li class="nav-item">
+                <a href="javascript:void(0)">Gallery <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="gallery.html">Activities</a></li>
+                    <li><a href="gallery.html">Events</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li><a href="enquiry.html" class="cta-btn">Apply Online</a></li>
+        </ul>
+    </nav>
+
+    <section class="inner-banner">
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+        
+        <div class="inner-banner-content">
+            <div class="floating-icon balloon"><i class="fas fa-shapes"></i></div>
+            <div class="floating-icon kite"><i class="fas fa-palette"></i></div>
+            <h1>Pre-Primary <span>Kindergarten</span></h1>
+            <p>A nurturing haven where curiosity is celebrated, creativity is encouraged, and every child is respected as a capable learner.</p>
+        </div>
+        
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="intro-text reveal">
+            <strong>Welcome to The Kings Court World School, Mansarovar-Jaipur's only Kindergarten dedicated to a truly Inquiry-Based, World-Class Curriculum at affordable fees.</strong>
+            
+            <p>Founded with a vision to transform early childhood education in Jaipur, our Kindergarten is a nurturing haven where curiosity is celebrated, creativity is encouraged, and every child is respected as a capable learner. We combine global best practices with Indian values to create a joyful and meaningful foundation for lifelong learning.</p>
+            
+            <p>At The Kings Court World School, we believe that every child is unique. Our experienced and passionate educators focus on holistic development—intellectual, emotional, social, and physical—ensuring that children grow with confidence and compassion.</p>
+            
+            <p>Our campus is thoughtfully designed with Reggio-inspired learning spaces, interactive corners, natural materials, and child-led exploration zones that stimulate imagination and inquiry. Parents are active partners in this journey, making our school a warm and connected community.</p>
+            
+            <div class="mission-text">Our mission is simple yet powerful:<br>To nurture confident thinkers, compassionate individuals, and joyful learners prepared for the world ahead.</div>
+            
+            <p>At The Kings Court World School, Mansarovar-Jaipur, we proudly follow an Inquiry-Based, Reggio-Emilia inspired curriculum blended with Montessori principles and structured academic foundations.</p>
+        </div>
+
+        <h2 class="section-title reveal" style="margin-top: 5rem;">Our Teaching <span style="color: var(--google-red);">Philosophy</span></h2>
+
+        <div class="pillars-grid">
+            <div class="pillar-card reveal">
+                <div class="pillar-icon"><i class="fas fa-seedling"></i></div>
+                <h3>Reggio Experience</h3>
+                <p>Inspired by the Reggio Emilia philosophy, we view children as strong, capable, and full of potential. Classrooms function as the "third teacher."</p>
+                <ul>
+                    <li>Learning happens through projects, exploration, and collaboration.</li>
+                    <li>Documentation panels showcase children's thinking and creativity.</li>
+                    <li>Art, expression, and open-ended materials play a central role in learning.</li>
+                </ul>
+                <div class="highlight-text">Children learn by asking questions, investigating ideas, and discovering answers—making education meaningful rather than mechanical.</div>
+            </div>
+            
+            <div class="pillar-card reveal">
+                <div class="pillar-icon"><i class="fas fa-search-plus"></i></div>
+                <h3>Inquiry-Based Learning</h3>
+                <p>We design learning experiences around curiosity. Instead of memorizing facts, children:</p>
+                <ul>
+                    <li>Explore real-world concepts</li>
+                    <li>Engage in discussions and hands-on investigations</li>
+                    <li>Develop critical thinking and problem-solving skills</li>
+                    <li>Build communication and collaboration abilities</li>
+                </ul>
+            </div>
+
+            <div class="pillar-card reveal">
+                <div class="pillar-icon"><i class="fas fa-cubes"></i></div>
+                <h3>Montessori Integration</h3>
+                <p>We incorporate Montessori materials to promote:</p>
+                <ul>
+                    <li>Independence</li>
+                    <li>Concentration</li>
+                    <li>Fine motor development</li>
+                    <li>Practical life skills</li>
+                </ul>
+            </div>
+
+            <div class="pillar-card reveal">
+                <div class="pillar-icon"><i class="fas fa-child"></i></div>
+                <h3>Holistic & Integrated Development</h3>
+                <p>Our curriculum seamlessly integrates:</p>
+                <ul>
+                    <li>Language & Literacy</li>
+                    <li>Numeracy & Logical Thinking</li>
+                    <li>Environmental Awareness</li>
+                    <li>Social & Emotional Learning</li>
+                    <li>Creativity & Expression</li>
+                </ul>
+                <div class="highlight-text">All of this is delivered in a balanced environment of structured guidance and purposeful play.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-section">
+        <h2 class="section-title reveal" style="margin-bottom: 3rem;">Our Kindergarten <span style="color: var(--google-blue);">Programs</span></h2>
+        
+        <div class="program-grid">
+            <div class="prog-card reveal">
+                <div class="prog-badge">Jal</div>
+                <h3>Playgroup</h3>
+                <p>A gentle introduction to school life through play-based learning.</p>
+                <div class="prog-focus">
+                    <span><i class="fas fa-bullseye"></i> Focus:</span>
+                    Sensory exploration, social bonding, language exposure, and motor skills.
+                </div>
+            </div>
+            
+            <div class="prog-card reveal">
+                <div class="prog-badge">Agni</div>
+                <h3>Nursery</h3>
+                <p>Curiosity turns into structured exploration.</p>
+                <div class="prog-focus">
+                    <span><i class="fas fa-bullseye"></i> Focus:</span>
+                    Foundational literacy, early numeracy, confidence building, and communication.
+                </div>
+            </div>
+
+            <div class="prog-card reveal">
+                <div class="prog-badge">Vayu</div>
+                <h3>Junior KG</h3>
+                <p>A stage of independent thinking and creative problem-solving.</p>
+                <div class="prog-focus">
+                    <span><i class="fas fa-bullseye"></i> Focus:</span>
+                    Reading readiness, number concepts, expression skills, and inquiry projects.
+                </div>
+            </div>
+
+            <div class="prog-card reveal">
+                <div class="prog-badge">Akash</div>
+                <h3>Senior KG</h3>
+                <p>Preparing for formal schooling with confidence.</p>
+                <div class="prog-focus">
+                    <span><i class="fas fa-bullseye"></i> Focus:</span>
+                    Strong literacy & numeracy foundation, project-based learning, presentation skills, and emotional readiness.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--white);">
+        <h2 class="section-title reveal">Admission <span style="color: var(--google-red);">Process</span></h2>
+        <p class="intro-text reveal">Welcome to a smooth and parent-friendly admission journey at The Kings Court World School, Mansarovar-Jaipur.</p>
+        
+        <div class="process-grid">
+            <div class="process-card reveal">
+                <div class="process-step">1</div>
+                <h3>Inquiry</h3>
+                <p>Connect with us via call, website, or campus visit. Our team will guide you with complete transparency regarding curriculum and fee structure.</p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-step">2</div>
+                <h3>Campus Visit</h3>
+                <p>Experience our Reggio-inspired classrooms and inquiry-based learning environment firsthand.</p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-step">3</div>
+                <h3>Application Submission</h3>
+                <p>Submit your admission form online or at the campus. Our admission team assists you at every step.</p>
+            </div>
+            <div class="process-card reveal">
+                <div class="process-step">4</div>
+                <h3>Friendly Interaction</h3>
+                <p>A simple and comfortable interaction ensures your child feels happy and ready to begin their learning journey with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--light);">
+        <h2 class="section-title reveal">Why Choose <span style="color: var(--google-yellow);">The Kings Court?</span></h2>
+        
+        <ul class="why-us-list reveal">
+            <li><i class="fas fa-check-circle"></i> Mansarovar-Jaipur's only Kindergarten offering a structured Inquiry-Based World-Class Curriculum</li>
+            <li><i class="fas fa-check-circle"></i> Reggio-Inspired experiential learning environment</li>
+            <li><i class="fas fa-check-circle"></i> Montessori-integrated methodology</li>
+            <li><i class="fas fa-check-circle"></i> Affordable fee structure</li>
+            <li><i class="fas fa-check-circle"></i> Strong academic foundation with joyful learning</li>
+            <li><i class="fas fa-check-circle"></i> Parent partnership & transparent communication</li>
+        </ul>
+
+        <div class="legacy-block reveal">
+            <h2>Under the Aegis of VA Schools Education System</h2>
+            <p>The Kings Court World School proudly functions under the aegis of the VA Schools Education System, a progressive and established education group with extensive experience in successfully leading IB, Cambridge, and CBSE institutions across India.</p>
+            
+            <p>With a strong legacy of academic excellence and institutional leadership, VA Schools brings global standards, structured systems, and visionary educational practices to our Kindergarten. From curriculum planning and teacher training to quality assurance and academic governance, every aspect of our program reflects professionalism, innovation, and commitment to excellence.</p>
+            
+            <h4 style="margin-top: 2rem; font-size: 1.2rem; color: var(--google-yellow);">Guided by this experienced education network, our Kindergarten benefits from:</h4>
+            
+            <ul class="legacy-list">
+                <li><i class="fas fa-star"></i> Internationally aligned academic frameworks</li>
+                <li><i class="fas fa-star"></i> Continuous teacher training and mentoring</li>
+                <li><i class="fas fa-star"></i> Structured systems and transparent governance</li>
+                <li><i class="fas fa-star"></i> Proven leadership in managing world-class institutions</li>
+                <li><i class="fas fa-star"></i> A strong blend of global exposure and Indian values</li>
+            </ul>
+            
+            <p style="margin-top: 3rem; font-weight: bold; font-size: 1.2rem;">At The Kings Court World School, your child's early learning journey is supported by the strength, credibility, and vision of a trusted educational institution ensuring a truly world-class foundation from the very beginning.</p>
+            
+            <div class="legacy-quote">
+                At The Kings Court World School, every day is an opportunity for your child to explore, question, create, and grow.
+            </div>
+            <div class="legacy-quote-sub">
+                Where curiosity leads, confidence follows, and learning becomes a lifelong love.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1rem;">
+                    <a href="index.html">
+                        <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 60px;">
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.html?id=100089307563341" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/kingscourtworldschool" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="tel:+917665083556"><i class="fa fa-phone"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="enquiry.html">Enroll Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Prospectus</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Plot no.- 5, Kings lane, Suraj Vatika, Golyawas, Vandemataram Circle, Mansarovar, Jaipur -302020</li>
+                    <li><i class="fas fa-phone"></i> +91-76650 83556</li>
+                    <li><i class="fas fa-envelope"></i> kingscourtworldschool@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2026 Kings Court World School</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Dropdown toggle on mobile
+        const dropdownToggles = document.querySelectorAll('.nav-item > a');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if(window.innerWidth <= 992) {
+                    const dropdown = this.nextElementSibling;
+                    if(dropdown && dropdown.classList.contains('dropdown-menu')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                }
+            });
+        });
+
+        // Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load in case elements are already in view
+        reveal();
+    </script>
+</body>
+</html>
