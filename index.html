@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Kings Court World School | Best Kindergarten in Mansarovar, Jaipur</title>
+    <meta name="description" content="Welcome to The Kings Court World School, Mansarovar–Jaipur’s only Kindergarten dedicated to a truly Inquiry-Based, World-Class Curriculum at affordable fees.">
+    <meta name="keywords" content="Kings Court World School, Kindergarten Jaipur, Best School in Mansarovar, Reggio Emilia Jaipur, Montessori School Rajasthan, Inquiry-Based Learning">
+    <meta name="author" content="Kings Court World School">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" type="image/png" href="/favKCWS.png">
+    <link rel="apple-touch-icon" href="/favKCWS.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+
+    <style>
+        /* --- Page Specific Styles (Index) --- */
+        
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 5% 10vh 5%;
+            overflow: hidden;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 75vh !important; 
+                padding-top: 100px !important;
+                padding-bottom: 8vh !important;
+            }
+        }
+
+        .hero-bg-slider {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background-color: var(--dark);
+        }
+
+        .hero-bg-slider .slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        @keyframes subtleZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.06); }
+        }
+
+        .hero-bg-slider .slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(32, 33, 36, 0.6); /* Solid Dark Overlay */
+            z-index: 1;
+        }
+
+        .hero-bg-slider .slide.active {
+            opacity: 1;
+            animation: subtleZoom 12s alternate infinite ease-in-out;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 850px;
+            width: 100%;
+            animation: heroPopIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 1rem;
+                margin-bottom: 3vh;
+            }
+        }
+
+        @keyframes heroPopIn {
+            0% { transform: translateY(30px) scale(0.95); opacity: 0; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.2rem, 5vw + 1rem, 4.5rem);
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+            font-weight: normal;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.6);
+        }
+        
+        .hero-content h1 span {
+            color: var(--google-yellow);
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 1.8vw + 0.5rem, 1.25rem);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 1);
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            background: var(--google-blue);
+            color: white !important;
+            font-size: clamp(0.9rem, 1.2vw + 0.5rem, 1.1rem);
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
+        }
+
+        .hero-cta i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: transparent;
+            border-color: var(--google-yellow);
+            color: var(--google-yellow) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .hero-cta:hover i { transform: translateX(5px); }
+
+        .hero-kid {
+            position: absolute;
+            z-index: 14;  
+            height: clamp(120px, 18vw, 260px);
+            width: auto;
+            bottom: clamp(45px, 8vw, 100px); 
+            animation: floatKid 4s ease-in-out infinite alternate;
+            filter: drop-shadow(0px 12px 15px rgba(0,0,0,0.4));
+            pointer-events: none; 
+        }
+        
+        .hero-kid-left { left: 5%; }
+        .hero-kid-right { right: 5%; animation-delay: 2s; }
+
+        @media (max-width: 768px) {
+            .hero-kid {
+                height: clamp(90px, 15vw, 130px);
+                bottom: clamp(35px, 6vw, 60px);
+            }
+            .hero-kid-left { left: 2%; }
+            .hero-kid-right { right: 2%; }
+        }
+        
+        @keyframes floatKid {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); }
+        }
+
+        .atmospheric-elements {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 3;
+            pointer-events: none; 
+            overflow: hidden;
+        }
+
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.8;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 35s; }
+        .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+        .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
+        
+        .cloud.two { width: 100px; height: 40px; top: 35%; left: -120px; animation-duration: 25s; animation-delay: 8s; opacity: 0.5; }
+        .cloud.two::after { width: 50px; height: 50px; top: -25px; left: 15px; }
+        
+        .cloud.three { width: 180px; height: 70px; top: 8%; left: -200px; animation-duration: 45s; animation-delay: 2s; }
+        .cloud.three::after { width: 90px; height: 90px; top: -45px; left: 35px; }
+        .cloud.three::before { width: 60px; height: 60px; top: -30px; right: 30px; }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+
+        .sun {
+            position: absolute; top: 12%; right: 10%;
+            width: clamp(50px, 7vw, 90px); aspect-ratio: 1;
+            background: var(--google-yellow); border-radius: 50%;
+            box-shadow: 0 0 30px var(--google-yellow), 0 0 60px var(--google-yellow);
+            animation: pulseSun 4s infinite alternate;
+        }
+
+        @keyframes pulseSun {
+            0% { transform: scale(1); opacity: 0.85; }
+            100% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 50px var(--google-yellow), 0 0 100px var(--google-yellow); }
+        }
+
+        .floating-icon { position: absolute; z-index: 4; opacity: 0.85; pointer-events: none; }
+
+        .rocket {
+            font-size: clamp(2rem, 3.5vw, 3rem); color: white; bottom: -10%; left: -10%;
+            animation: flyRocket 15s linear infinite;
+        }
+        @keyframes flyRocket {
+            0% { transform: translate(0, 0) rotate(45deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(110vw, -110vh) rotate(45deg); opacity: 0; }
+        }
+
+        .balloon {
+            font-size: clamp(3rem, 5.5vw, 5rem); color: var(--google-red);
+            top: 25%; left: 6%;
+            animation: floatBalloon 7s ease-in-out infinite; filter: drop-shadow(2px 5px 8px rgba(0,0,0,0.3));
+        }
+        @keyframes floatBalloon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @media (max-width: 768px) {
+            .robot, .balloon, .rocket, .sun { opacity: 0.3; transform: scale(0.6); }
+        }
+
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 15; pointer-events: none;
+        }
+        .wave-container svg { position: relative; display: block; width: calc(100% + 1.3px); height: clamp(40px, 9vw, 110px); }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- Quick Actions --- */
+        .quick-actions {
+            position: relative;
+            margin-top: -80px;
+            z-index: 20;
+            padding: 0 5%;
+            margin-bottom: 4rem;
+        }
+
+        .action-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .action-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            flex: 1;
+            max-width: 350px;
+            min-width: 250px;
+        }
+
+        .action-card:nth-child(1) { border-bottom: 6px solid var(--google-blue); }
+        .action-card:nth-child(1) i, .action-card:nth-child(1) .btn-text { color: var(--google-blue); }
+        
+        .action-card:nth-child(2) { border-bottom: 6px solid var(--google-red); transition-delay: 0.1s; }
+        .action-card:nth-child(2) i, .action-card:nth-child(2) .btn-text { color: var(--google-red); }
+
+        .action-card:hover { transform: translateY(-10px) !important; }
+
+        .action-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-text {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        /* --- General Section --- */
+        .section {
+            padding: 4rem 10%;
+            position: relative;
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            display: block; text-align: center; color: #666; margin-bottom: 0.5rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;
+        }
+
+        /* --- About Section --- */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .video-block {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .about-text p strong {
+            color: var(--dark);
+        }
+
+        /* --- Curriculum & Methodology Section --- */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .methodology-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 5px solid transparent;
+        }
+        
+        .methodology-card:nth-child(1) { border-color: var(--google-blue); transition-delay: 0.1s; }
+        .methodology-card:nth-child(2) { border-color: var(--google-red); transition-delay: 0.2s; }
+        .methodology-card:nth-child(3) { border-color: var(--google-yellow); transition-delay: 0.3s; }
+        .methodology-card:nth-child(4) { border-color: var(--google-green); transition-delay: 0.4s; }
+
+        .methodology-card:hover { transform: translateY(-5px) !important; }
+
+        .methodology-card h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .methodology-card ul {
+            list-style: none;
+            padding: 0;
+            color: #555;
+        }
+        
+        .methodology-card ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .methodology-card ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--google-green);
+            font-size: 0.9rem;
+        }
+
+        /* --- Programs Section (Solid Colors) --- */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .program-card {
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .program-card::after {
+            content: '';
+            position: absolute;
+            top: -50px; right: -50px;
+            width: 100px; height: 100px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .program-card h3 { font-size: 1.8rem; margin-bottom: 0.5rem; font-family: 'Bubblegum Sans', cursive; letter-spacing: 1px;}
+        .program-card span.age-group { display: block; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;}
+        .program-card p { font-size: 0.95rem; margin-bottom: 1rem; opacity: 0.95;}
+        .program-card .focus { font-weight: 600; font-size: 0.9rem; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 10px; display: block;}
+
+        /* Solid Exact Google Colors - No Gradients */
+        .program-card.bg-blue { background-color: var(--google-blue); }
+        .program-card.bg-red { background-color: var(--google-red); }
+        .program-card.bg-yellow { background-color: var(--google-yellow); color: var(--dark); }
+        .program-card.bg-yellow .focus { background: rgba(0,0,0,0.05); }
+        .program-card.bg-yellow::after { background: rgba(0,0,0,0.05); }
+        .program-card.bg-green { background-color: var(--google-green); }
+
+        .program-card:hover { transform: translateY(-10px); }
+
+        /* --- Admission Process & Why Choose Us --- */
+        .process-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .process-step {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .process-step .step-num {
+            font-size: 2.5rem;
+            font-family: 'Bubblegum Sans', cursive;
+            color: white;
+            min-width: 60px;
+            height: 60px;
+            background-color: var(--google-blue); /* Solid blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+        }
+        .process-step h4 { font-family: 'Fredoka', sans-serif; font-size: 1.3rem; margin-bottom: 0.3rem;}
+        
+        .why-us-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .why-us-list li {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        .why-us-list li i {
+            color: var(--google-green);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        /* --- Facilities --- */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .facility-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .facility-card:hover { transform: translateY(-5px) !important; }
+        
+        .facility-card:nth-child(4n+1):hover { border-color: var(--google-blue); }
+        .facility-card:nth-child(4n+1) i { color: var(--google-blue); }
+        
+        .facility-card:nth-child(4n+2):hover { border-color: var(--google-red); }
+        .facility-card:nth-child(4n+2) i { color: var(--google-red); }
+        
+        .facility-card:nth-child(4n+3):hover { border-color: var(--google-yellow); }
+        .facility-card:nth-child(4n+3) i { color: var(--google-yellow); }
+        
+        .facility-card:nth-child(4n+4):hover { border-color: var(--google-green); }
+        .facility-card:nth-child(4n+4) i { color: var(--google-green); }
+
+        .facility-card i {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* --- VA Schools Banner --- */
+        .va-schools-banner {
+            background-color: var(--google-blue); /* Removed gradient */
+            color: white;
+            padding: 4rem 10%;
+            text-align: center;
+            border-radius: 30px;
+            margin: 0 5% 4rem 5%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .va-schools-banner::before {
+            content: '\f19d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -20px;
+            right: -20px;
+            transform: rotate(-15deg);
+        }
+
+        .va-schools-banner h2 { color: var(--google-yellow); margin-bottom: 1.5rem; }
+        .va-schools-banner p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 1.5rem auto; line-height: 1.8; opacity: 0.9; }
+        .va-schools-banner ul {
+            list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;
+        }
+        .va-schools-banner ul li {
+            background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 0.95rem; backdrop-filter: blur(5px);
+        }
+    </style>
+
+
+        /* =========================================
+           --- HERO SECTION ---
+           ========================================= */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 5% 10vh 5%;
+            overflow: hidden;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 75vh !important; 
+                padding-top: 100px !important;
+                padding-bottom: 8vh !important;
+            }
+        }
+
+        .hero-bg-slider {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background-color: var(--dark);
+        }
+
+        .hero-bg-slider .slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        @keyframes subtleZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.06); }
+        }
+
+        .hero-bg-slider .slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(32, 33, 36, 0.6); /* Solid Dark Overlay */
+            z-index: 1;
+        }
+
+        .hero-bg-slider .slide.active {
+            opacity: 1;
+            animation: subtleZoom 12s alternate infinite ease-in-out;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 850px;
+            width: 100%;
+            animation: heroPopIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 1rem;
+                margin-bottom: 3vh;
+            }
+        }
+
+        @keyframes heroPopIn {
+            0% { transform: translateY(30px) scale(0.95); opacity: 0; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.2rem, 5vw + 1rem, 4.5rem);
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+            font-weight: normal;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.6);
+        }
+        
+        .hero-content h1 span {
+            color: var(--google-yellow);
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 1.8vw + 0.5rem, 1.25rem);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 1);
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            background: var(--google-blue);
+            color: white !important;
+            font-size: clamp(0.9rem, 1.2vw + 0.5rem, 1.1rem);
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
+        }
+
+        .hero-cta i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: transparent;
+            border-color: var(--google-yellow);
+            color: var(--google-yellow) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .hero-cta:hover i { transform: translateX(5px); }
+
+        .hero-kid {
+            position: absolute;
+            z-index: 14;  
+            height: clamp(120px, 18vw, 260px);
+            width: auto;
+            bottom: clamp(45px, 8vw, 100px); 
+            animation: floatKid 4s ease-in-out infinite alternate;
+            filter: drop-shadow(0px 12px 15px rgba(0,0,0,0.4));
+            pointer-events: none; 
+        }
+        
+        .hero-kid-left { left: 5%; }
+        .hero-kid-right { right: 5%; animation-delay: 2s; }
+
+        @media (max-width: 768px) {
+            .hero-kid {
+                height: clamp(90px, 15vw, 130px);
+                bottom: clamp(35px, 6vw, 60px);
+            }
+            .hero-kid-left { left: 2%; }
+            .hero-kid-right { right: 2%; }
+        }
+        
+        @keyframes floatKid {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); }
+        }
+
+        .atmospheric-elements {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 3;
+            pointer-events: none; 
+            overflow: hidden;
+        }
+
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.8;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 35s; }
+        .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+        .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
+        
+        .cloud.two { width: 100px; height: 40px; top: 35%; left: -120px; animation-duration: 25s; animation-delay: 8s; opacity: 0.5; }
+        .cloud.two::after { width: 50px; height: 50px; top: -25px; left: 15px; }
+        
+        .cloud.three { width: 180px; height: 70px; top: 8%; left: -200px; animation-duration: 45s; animation-delay: 2s; }
+        .cloud.three::after { width: 90px; height: 90px; top: -45px; left: 35px; }
+        .cloud.three::before { width: 60px; height: 60px; top: -30px; right: 30px; }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+
+        .sun {
+            position: absolute; top: 12%; right: 10%;
+            width: clamp(50px, 7vw, 90px); aspect-ratio: 1;
+            background: var(--google-yellow); border-radius: 50%;
+            box-shadow: 0 0 30px var(--google-yellow), 0 0 60px var(--google-yellow);
+            animation: pulseSun 4s infinite alternate;
+        }
+
+        @keyframes pulseSun {
+            0% { transform: scale(1); opacity: 0.85; }
+            100% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 50px var(--google-yellow), 0 0 100px var(--google-yellow); }
+        }
+
+        .floating-icon { position: absolute; z-index: 4; opacity: 0.85; pointer-events: none; }
+
+        .rocket {
+            font-size: clamp(2rem, 3.5vw, 3rem); color: white; bottom: -10%; left: -10%;
+            animation: flyRocket 15s linear infinite;
+        }
+        @keyframes flyRocket {
+            0% { transform: translate(0, 0) rotate(45deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(110vw, -110vh) rotate(45deg); opacity: 0; }
+        }
+
+        .balloon {
+            font-size: clamp(3rem, 5.5vw, 5rem); color: var(--google-red);
+            top: 25%; left: 6%;
+            animation: floatBalloon 7s ease-in-out infinite; filter: drop-shadow(2px 5px 8px rgba(0,0,0,0.3));
+        }
+        @keyframes floatBalloon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @media (max-width: 768px) {
+            .robot, .balloon, .rocket, .sun { opacity: 0.3; transform: scale(0.6); }
+        }
+
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 15; pointer-events: none;
+        }
+        .wave-container svg { position: relative; display: block; width: calc(100% + 1.3px); height: clamp(40px, 9vw, 110px); }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- Quick Actions --- */
+        .quick-actions {
+            position: relative;
+            margin-top: -80px;
+            z-index: 20;
+            padding: 0 5%;
+            margin-bottom: 4rem;
+        }
+
+        .action-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .action-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            flex: 1;
+            max-width: 350px;
+            min-width: 250px;
+        }
+
+        .action-card:nth-child(1) { border-bottom: 6px solid var(--google-blue); }
+        .action-card:nth-child(1) i, .action-card:nth-child(1) .btn-text { color: var(--google-blue); }
+        
+        .action-card:nth-child(2) { border-bottom: 6px solid var(--google-red); transition-delay: 0.1s; }
+        .action-card:nth-child(2) i, .action-card:nth-child(2) .btn-text { color: var(--google-red); }
+
+        .action-card:hover { transform: translateY(-10px) !important; }
+
+        .action-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-text {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        /* --- General Section --- */
+        .section {
+            padding: 4rem 10%;
+            position: relative;
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            display: block; text-align: center; color: #666; margin-bottom: 0.5rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;
+        }
+
+        /* --- About Section --- */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .video-block {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .about-text p strong {
+            color: var(--dark);
+        }
+
+        /* --- Curriculum & Methodology Section --- */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .methodology-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 5px solid transparent;
+        }
+        
+        .methodology-card:nth-child(1) { border-color: var(--google-blue); transition-delay: 0.1s; }
+        .methodology-card:nth-child(2) { border-color: var(--google-red); transition-delay: 0.2s; }
+        .methodology-card:nth-child(3) { border-color: var(--google-yellow); transition-delay: 0.3s; }
+        .methodology-card:nth-child(4) { border-color: var(--google-green); transition-delay: 0.4s; }
+
+        .methodology-card:hover { transform: translateY(-5px) !important; }
+
+        .methodology-card h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .methodology-card ul {
+            list-style: none;
+            padding: 0;
+            color: #555;
+        }
+        
+        .methodology-card ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .methodology-card ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--google-green);
+            font-size: 0.9rem;
+        }
+
+        /* --- Programs Section (Solid Colors) --- */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .program-card {
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .program-card::after {
+            content: '';
+            position: absolute;
+            top: -50px; right: -50px;
+            width: 100px; height: 100px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .program-card h3 { font-size: 1.8rem; margin-bottom: 0.5rem; font-family: 'Bubblegum Sans', cursive; letter-spacing: 1px;}
+        .program-card span.age-group { display: block; font-weight: bold; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;}
+        .program-card p { font-size: 0.95rem; margin-bottom: 1rem; opacity: 0.95;}
+        .program-card .focus { font-weight: 600; font-size: 0.9rem; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 10px; display: block;}
+
+        /* Solid Exact Google Colors - No Gradients */
+        .program-card.bg-blue { background-color: var(--google-blue); }
+        .program-card.bg-red { background-color: var(--google-red); }
+        .program-card.bg-yellow { background-color: var(--google-yellow); color: var(--dark); }
+        .program-card.bg-yellow .focus { background: rgba(0,0,0,0.05); }
+        .program-card.bg-yellow::after { background: rgba(0,0,0,0.05); }
+        .program-card.bg-green { background-color: var(--google-green); }
+
+        .program-card:hover { transform: translateY(-10px); }
+
+        /* --- Admission Process & Why Choose Us --- */
+        .process-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .process-step {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .process-step .step-num {
+            font-size: 2.5rem;
+            font-family: 'Bubblegum Sans', cursive;
+            color: white;
+            min-width: 60px;
+            height: 60px;
+            background-color: var(--google-blue); /* Solid blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+        }
+        .process-step h4 { font-family: 'Fredoka', sans-serif; font-size: 1.3rem; margin-bottom: 0.3rem;}
+        
+        .why-us-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .why-us-list li {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        .why-us-list li i {
+            color: var(--google-green);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        /* --- Facilities --- */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .facility-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .facility-card:hover { transform: translateY(-5px) !important; }
+        
+        .facility-card:nth-child(4n+1):hover { border-color: var(--google-blue); }
+        .facility-card:nth-child(4n+1) i { color: var(--google-blue); }
+        
+        .facility-card:nth-child(4n+2):hover { border-color: var(--google-red); }
+        .facility-card:nth-child(4n+2) i { color: var(--google-red); }
+        
+        .facility-card:nth-child(4n+3):hover { border-color: var(--google-yellow); }
+        .facility-card:nth-child(4n+3) i { color: var(--google-yellow); }
+        
+        .facility-card:nth-child(4n+4):hover { border-color: var(--google-green); }
+        .facility-card:nth-child(4n+4) i { color: var(--google-green); }
+
+        .facility-card i {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* --- VA Schools Banner --- */
+        .va-schools-banner {
+            background-color: var(--google-blue); /* Removed gradient */
+            color: white;
+            padding: 4rem 10%;
+            text-align: center;
+            border-radius: 30px;
+            margin: 0 5% 4rem 5%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .va-schools-banner::before {
+            content: '\f19d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -20px;
+            right: -20px;
+            transform: rotate(-15deg);
+        }
+
+        .va-schools-banner h2 { color: var(--google-yellow); margin-bottom: 1.5rem; }
+        .va-schools-banner p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 1.5rem auto; line-height: 1.8; opacity: 0.9; }
+        .va-schools-banner ul {
+            list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;
+        }
+        .va-schools-banner ul li {
+            background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px; font-size: 0.95rem; backdrop-filter: blur(5px);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #4285f4;
+            color: white;
+            padding: 4rem 5% 2rem 5%;
+            margin-top: 2rem;
+            position: relative;
+        }
+        
+        .footer-wave {
+            position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        .footer-wave svg { display: block; width: calc(100% + 1.3px); height: 80px; }
+        .footer-wave path { fill: var(--light); }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-col { flex: 1; min-width: 250px; }
+        .footer-col h3 { color: var(--google-yellow); margin-bottom: 1.5rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.8rem; }
+        .footer-col a { color: #ccc; }
+        .footer-col a:hover { color: var(--google-blue); }
+
+        /* Social Links & Copyright Fixes */
+        .social-links a {
+            display: inline-flex; width: 35px; height: 35px; background: rgba(255, 255, 255, 0.2); /* More visible circle */
+            color: white; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;
+        }
+        .social-links a:hover { background: white; color: var(--google-blue); transform: translateY(-3px); }
+
+        .copyright {
+            text-align: center; margin-top: 3rem; padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem; color: #ffffff; opacity: 0.9;
+        }
+
+        /* Mobile Menu */
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: var(--google-blue); }
+        
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            /* Mobile Nav Fixes */
+            .logo { max-width: 75%; }
+            .logo img { max-width: 100%; height: auto !important; }
+            .hamburger { display: block; margin-left: auto; padding-left: 15px; padding-right: 0; }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%; left: 0; width: 100%;
+                background: white; padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .dropdown-menu { position: static; box-shadow: none; padding-left: 20px; border-top: none; background: #f9f9f9; }
+            .about-container { grid-template-columns: 1fr; }
+            
+            .top-bar { justify-content: space-between; padding: 10px 5%; }
+            .top-bar-right { display: none; }
+            
+            .va-schools-banner { padding: 3rem 5%; margin: 0 0 3rem 0; border-radius: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 100px 5% 60px 5%; } 
+            .robot, .balloon { display: none; }
+            .section { padding: 3rem 5%; }
+            .quick-actions { margin-top: -50px; padding: 0 5%; }
+            .section h2 { font-size: 2.3rem; }
+            #side-quick-links ul li { width: 40px; height: 40px; }
+            #side-quick-links i { font-size: 1rem; min-width: 40px; }
+            .footer-wave svg { height: 50px; }
+            .process-step { flex-direction: column; text-align: center; }
+            .process-step .step-num { margin-right: 0; margin-bottom: 1rem; }
+            #side-quick-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-root"></div>
+
+
+    <section class="hero">
+        
+        <div class="hero-bg-slider">
+            <div class="slide active" style="background-image: url('/kcwsbanner.jpg');"></div>
+        </div>
+
+        <div class="atmospheric-elements">
+            <div class="sun"></div>
+            
+            <div class="star s1"></div>
+            <div class="star s2"></div>
+            <div class="star s3"></div>
+            <div class="star s4"></div>
+            <div class="star s5"></div>
+
+            <div class="cloud one"></div>
+            <div class="cloud two"></div>
+            <div class="cloud three"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Welcome to <br><span>The Kings Court</span> World School</h1>
+            <p>Mansarovar–Jaipur’s only Kindergarten dedicated to a truly Inquiry-Based, World-Class Curriculum at affordable fees.</p>
+            <a href="enquiry.html" class="hero-cta">Apply for Admissions <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="floating-icon rocket"><i class="fas fa-rocket"></i></div>
+        <div class="floating-icon balloon"><i class="fas fa-parachute-box"></i></div>
+
+        <img src="kid-left.png" alt="Happy Student" class="hero-kid hero-kid-left" title="Insert Left Kid PNG here">
+        <img src="kid-right.png" alt="Happy Student" class="hero-kid hero-kid-right" title="Insert Right Kid PNG here">
+
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="quick-actions">
+        <div class="action-grid">
+            <div class="action-card reveal">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Apply Online</h3>
+                <p>Start your journey with us.</p>
+                <a href="enquiry.html" class="btn-text">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="action-card reveal">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Prospectus</h3>
+                <p>Download our brochure.</p>
+                <a href="#" class="btn-text">Download <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+    <div class="about-container reveal" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; max-width: 1300px; margin: 0 auto; padding: 40px; background-color: #f9f9f9; border-radius: 15px;">
+        
+        <div class="image-block" style="flex: 1 1 40%; max-width: 100%; min-width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="/welcomebanner.jpg" alt="Children engaged in inquiry-based learning with Reggio-inspired materials at The Kings Court World School" style="width: 100%; height: auto; object-fit: cover; border: none;">
+        </div>
+        
+        <div class="about-text" style="flex: 1 1 55%; font-family: 'Poppins', sans-serif; color: #444; line-height: 1.7;">
+            <h2 style="font-size: 2.5rem; margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">About <span style="color: var(--google-blue, #4285F4);">Us</span></h2>
+            <p style="margin-bottom: 18px; font-weight: 500;"><strong>Welcome to The Kings Court World School, Mansarovar–Jaipur’s only Kindergarten dedicated to a truly Inquiry-Based, World-Class Curriculum at affordable fees.</strong></p>
+            <p style="margin-bottom: 18px;">Founded with a vision to transform early childhood education in Jaipur, our Kindergarten is a nurturing haven where curiosity is celebrated, creativity is encouraged, and every child is respected as a capable learner. We combine global best practices with Indian values to create a joyful and meaningful foundation for lifelong learning.</p>
+            <p style="margin-bottom: 18px;">At The Kings Court World School, we believe that every child is unique. Our experienced and passionate educators focus on holistic development—intellectual, emotional, social, and physical—ensuring that children grow with confidence and compassion.</p>
+            <p style="margin-bottom: 18px;">Our campus is thoughtfully designed with Reggio-inspired learning spaces, interactive corners, natural materials, and child-led exploration zones that stimulate imagination and inquiry. Parents are active partners in this journey, making our school a warm and connected community.</p>
+            <p style="margin-bottom: 18px; font-weight: 500;"><strong>Our mission is simple yet powerful:</strong> To nurture confident thinkers, compassionate individuals, and joyful learners prepared for the world ahead.</p>
+        </div>
+    </div>
+</section>
+
+    <section class="section" style="background-color: #FFFFFF; border-top: 1px solid #E8EAED; border-bottom: 1px solid #E8EAED;">
+        <span class="section-subtitle">Our Methodology</span>
+        <h2>Integrated Curriculum</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto; color: #555; font-size: 1.1rem;">At The Kings Court World School, Mansarovar–Jaipur, we proudly follow an Inquiry-Based, Reggio-Emilia inspired curriculum blended with Montessori principles and structured academic foundations.</p>
+        
+        <div class="methodology-grid">
+            <div class="methodology-card reveal">
+                <h3>Reggio Experience</h3>
+                <ul>
+                    <li>Children viewed as strong & capable.</li>
+                    <li>Classrooms function as the "third teacher."</li>
+                    <li>Learning happens through projects & exploration.</li>
+                    <li>Documentation panels showcase creativity.</li>
+                    <li>Art, expression & open-ended materials.</li>
+                </ul>
+            </div>
+            <div class="methodology-card reveal">
+                <h3>Inquiry-Based Learning</h3>
+                <ul>
+                    <li>Explore real-world concepts.</li>
+                    <li>Discussions and hands-on investigations.</li>
+                    <li>Critical thinking & problem-solving.</li>
+                    <li>Communication and collaboration abilities.</li>
+                </ul>
+            </div>
+            <div class="methodology-card reveal">
+                <h3>Montessori Integration</h3>
+                <ul>
+                    <li>Promotes Independence.</li>
+                    <li>Builds Concentration.</li>
+                    <li>Fine motor development.</li>
+                    <li>Practical life skills integration.</li>
+                </ul>
+            </div>
+            <div class="methodology-card reveal">
+                <h3>Holistic Development</h3>
+                <ul>
+                    <li>Language & Literacy.</li>
+                    <li>Numeracy & Logical Thinking.</li>
+                    <li>Environmental Awareness.</li>
+                    <li>Social & Emotional Learning.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <span class="section-subtitle">Curriculum</span>
+        <h2>Our Kindergarten Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card bg-blue reveal">
+                <h3>Jal</h3>
+                <span class="age-group">Playgroup</span>
+                <p>A gentle introduction to school life through play-based learning.</p>
+                <span class="focus">Focus: Sensory exploration, social bonding, language exposure & motor skills.</span>
+            </div>
+            <div class="program-card bg-red reveal">
+                <h3>Agni</h3>
+                <span class="age-group">Nursery</span>
+                <p>Curiosity turns into structured exploration.</p>
+                <span class="focus">Focus: Foundational literacy, early numeracy, confidence building & communication.</span>
+            </div>
+            <div class="program-card bg-yellow reveal">
+                <h3>Vayu</h3>
+                <span class="age-group">Junior KG</span>
+                <p>A stage of independent thinking and creative problem-solving.</p>
+                <span class="focus">Focus: Reading readiness, number concepts, expression skills & inquiry projects.</span>
+            </div>
+            <div class="program-card bg-green reveal">
+                <h3>Akash</h3>
+                <span class="age-group">Senior KG</span>
+                <p>Preparing for formal schooling with confidence.</p>
+                <span class="focus">Focus: Literacy & numeracy, project-based learning, presentation & emotional readiness.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--light);">
+        <div class="about-container">
+            <div class="reveal">
+                <span class="section-subtitle" style="text-align: left;">Steps to join</span>
+                <h2 style="text-align: left;">Admission Process</h2>
+                <p style="margin-bottom: 2rem; color: #555; font-size: 1.1rem;">Welcome to a smooth and parent-friendly admission journey at The Kings Court World School, Mansarovar–Jaipur.</p>
+                
+                <div class="process-container">
+                    <div class="process-step">
+                        <div class="step-num">1</div>
+                        <div>
+                            <h4>Inquiry</h4>
+                            <p>Connect with us via call, website, or campus visit. Complete transparency regarding curriculum and fee structure.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">2</div>
+                        <div>
+                            <h4>Campus Visit</h4>
+                            <p>Experience our Reggio-inspired classrooms and inquiry-based learning environment firsthand.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">3</div>
+                        <div>
+                            <h4>Application Submission</h4>
+                            <p>Submit your admission form online or at the campus. Our admission team assists you at every step.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">4</div>
+                        <div>
+                            <h4>Friendly Interaction</h4>
+                            <p>A simple and comfortable interaction ensures your child feels happy and ready to begin their learning journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal">
+                <span class="section-subtitle" style="text-align: left;">Key Highlights</span>
+                <h2 style="text-align: left;">Why Choose Us?</h2>
+                <ul class="why-us-list">
+                    <li><i class="fas fa-check-circle"></i> Mansarovar–Jaipur’s only Kindergarten offering a structured Inquiry-Based World-Class Curriculum</li>
+                    <li><i class="fas fa-check-circle"></i> Reggio-Inspired experiential learning environment</li>
+                    <li><i class="fas fa-check-circle"></i> Montessori-integrated methodology</li>
+                    <li><i class="fas fa-check-circle"></i> Affordable fee structure</li>
+                    <li><i class="fas fa-check-circle"></i> Strong academic foundation with joyful learning</li>
+                    <li><i class="fas fa-check-circle"></i> Parent partnership & transparent communication</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <span class="section-subtitle">Infrastructure</span>
+        <h2>World Class Amenities</h2>
+        
+        <div class="facilities-grid">
+            <div class="facility-card reveal"><i class="fas fa-snowflake"></i> <span>AC Classrooms</span></div>
+            <div class="facility-card reveal"><i class="fas fa-futbol"></i> <span>Indoor Soccer</span></div>
+            <div class="facility-card reveal"><i class="fas fa-fist-raised"></i> <span>Martial Arts</span></div>
+            <div class="facility-card reveal"><i class="fas fa-basketball-ball"></i> <span>Basketball</span></div>
+            <div class="facility-card reveal"><i class="fas fa-baseball-ball"></i> <span>Cricket Field</span></div>
+            <div class="facility-card reveal"><i class="fas fa-mountain"></i> <span>Adventure Sports</span></div>
+            <div class="facility-card reveal"><i class="fas fa-film"></i> <span>School Cinema</span></div>
+            <div class="facility-card reveal"><i class="fas fa-table-tennis"></i> <span>Badminton</span></div>
+            <div class="facility-card reveal"><i class="fas fa-flask"></i> <span>Space Lab</span></div>
+            <div class="facility-card reveal"><i class="fas fa-skating"></i> <span>Skating</span></div>
+            <div class="facility-card reveal"><i class="fas fa-bullseye"></i> <span>Archery Field</span></div>
+        </div>
+    </section>
+
+    <div class="va-schools-banner reveal">
+        <h2>Under the Aegis of VA Schools Education System</h2>
+        <p>The Kings Court World School proudly functions under the aegis of the VA Schools Education System, a progressive and established education group with extensive experience in successfully leading IB, Cambridge, and CBSE institutions across India.</p>
+        <p>Guided by this experienced education network, our Kindergarten benefits from globally aligned frameworks, continuous teacher training, structured systems, and a strong blend of global exposure with Indian values. Your child’s early learning journey is supported by the strength, credibility, and vision of a trusted educational institution.</p>
+        <ul>
+            <li>Internationally aligned academic frameworks</li>
+            <li>Continuous teacher training</li>
+            <li>Structured systems & transparent governance</li>
+            <li>Global exposure & Indian values</li>
+        </ul>
+        <div style="margin-top: 2rem; font-family: 'Bubblegum Sans', cursive; font-size: 1.5rem; color: var(--google-yellow);">
+            Where curiosity leads, confidence follows, and learning becomes a lifelong love.
+        </div>
+    </div>
+
+    <div id="footer-root"></div>
+
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
+    <script>
+        // --- Page Specific Logic (Index) ---
+        
+        // --- Hero Image Slider Logic ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-bg-slider .slide');
+        let sliderInterval;
+
+        function showSlide(index) {
+            if (!slides.length) return;
+            slides.forEach((slide) => slide.classList.remove('active'));
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(step) {
+            currentSlide += step;
+            showSlide(currentSlide);
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            if (!slides.length) return;
+            sliderInterval = setInterval(() => {
+                moveSlide(1);
+            }, 6000); 
+        }
+
+        function resetAutoPlay() {
+            clearInterval(sliderInterval);
+            startAutoPlay();
+        }
+
+        startAutoPlay();
+    </script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog | Kings Court World School</title>
+    <meta name="description" content="Read the latest news, parenting tips, and educational insights from Kings Court World School, Jaipur.">
+    <meta name="keywords" content="Kings Court World School Blog, Education Tips, Parenting Jaipur, KCWS News, Kindergarten Insights">
+    <meta name="author" content="Kings Court World School">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/favKCWS.png">
+    <link rel="apple-touch-icon" href="/favKCWS.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+
+    <style>
+        /* --- Page Specific Styles (Blog) --- */
+
+        /* --- Inner Banner (Solid Color, No Gradients, FIXED PADDING) --- */
+        .inner-banner {
+            position: relative;
+            height: 35vh;              
+            min-height: 280px;         
+            background-color: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 40px;
+            padding-bottom: 70px;      
+        }
+
+        .inner-banner-content {
+            z-index: 10;
+            position: relative;
+            animation: popIn 1s ease-out;
+            margin-bottom: 40px;       
+        }
+
+        .inner-banner h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 0;
+            color: var(--google-yellow);
+            font-family: 'Bubblegum Sans', cursive;
+            letter-spacing: 1px;
+        }
+
+        /* Banner Clouds */
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.6;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 25s; }
+        .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+        .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
+        .cloud.two { width: 120px; height: 50px; top: 30%; right: -120px; animation-duration: 30s; animation-direction: reverse; }
+        .cloud.two::after { width: 60px; height: 60px; top: -30px; left: 20px; }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* Wave Divider */
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        .wave-container svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- Blog Main Container --- */
+        .section { padding: 5rem 10%; position: relative; }
+        
+        .blog-header { text-align: center; max-width: 900px; margin: 0 auto 3rem auto; }
+        .blog-header h2 { color: var(--dark); font-size: 2.8rem; margin-bottom: 1rem; font-family: 'Bubblegum Sans', cursive; letter-spacing: 1px; }
+        .blog-header p { font-size: 1.15rem; color: #555; }
+
+        /* --- Blog Grid --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid transparent;
+            position: relative;
+        }
+
+        .blog-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+        }
+
+        /* Color Theme Mapping for Cards */
+        .blog-card:nth-child(4n+1) { border-top-color: var(--google-blue); }
+        .blog-card:nth-child(4n+1) .blog-tag { background: var(--google-blue); color: white; }
+        .blog-card:nth-child(4n+1) .read-more { color: var(--google-blue); }
+
+        .blog-card:nth-child(4n+2) { border-top-color: var(--google-red); }
+        .blog-card:nth-child(4n+2) .blog-tag { background: var(--google-red); color: white; }
+        .blog-card:nth-child(4n+2) .read-more { color: var(--google-red); }
+
+        .blog-card:nth-child(4n+3) { border-top-color: var(--google-yellow); }
+        .blog-card:nth-child(4n+3) .blog-tag { background: var(--google-yellow); color: var(--dark); }
+        .blog-card:nth-child(4n+3) .read-more { color: var(--google-yellow); }
+
+        .blog-card:nth-child(4n+4) { border-top-color: var(--google-green); }
+        .blog-card:nth-child(4n+4) .blog-tag { background: var(--google-green); color: white; }
+        .blog-card:nth-child(4n+4) .read-more { color: var(--google-green); }
+
+        /* Image Area */
+        .blog-img-container {
+            width: 100%;
+            height: 220px;
+            background-color: #E8EAED; /* Fallback color */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-img-container img {
+            transform: scale(1.05);
+        }
+
+        .blog-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Content Area */
+        .blog-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .blog-meta i { margin-right: 5px; }
+
+        .blog-content h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+        }
+        .read-more i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+        .blog-card:hover .read-more i {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 992px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 3rem 5%; }
+            .inner-banner h1 { font-size: 2.5rem; }
+            .blog-header h2 { font-size: 2rem; }
+            .blog-content { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-root"></div>
+
+
+    <section class="inner-banner">
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+        
+        <div class="inner-banner-content">
+            <h1>Our Blog</h1>
+        </div>
+
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="blog-header">
+            <h2>Latest Insights & Updates</h2>
+            <p>Explore our recent articles, parenting tips, and school events to stay connected with the Kings Court World School community.</p>
+        </div>
+        
+        <div class="blog-grid">
+            
+            <div class="blog-card">
+    <a href="best_junior_kg_lkg_school" class="blog-card-link">
+        <div class="blog-img-container">
+            <span class="blog-tag">Education</span>
+            <img src="/gallery/IMG_0804.jpg" alt="Classroom Activity">
+        </div>
+        <div class="blog-content">
+            <div class="blog-meta">
+                <span><i class="far fa-user"></i> KCWS Team</span>
+            </div>
+            <h3>Finding the Best Junior KG (LKG) School Near Vandemataram Circle</h3>
+            <p>A comprehensive guide on what makes Kings Court World School the best choice for Junior KG and LKG admissions in Mansarovar.</p>
+            <span class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></span>
+        </div>
+    </a>
+</div>
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Education</span>
+                    <img src="/gallery/IMG_1933.jpg" alt="Classroom Activity">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Unlocking Potential: The Importance of Play-Based Learning</h3>
+                    <p>Discover how Reggio Emilia and Montessori methods spark creativity and build a foundation of independence and cognitive skills.</p>
+                    <a href="the-importance-of-play-based-learning" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Parenting</span>
+                    <img src="gallery/664ea7a3-e720-422a-ba72-68c295ac1378.jpg" alt="Parenting Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Best Pre School in Golyawas Mansarovar Jaipur: The Ultimate Guide</h3>
+                    <p>Looking for the best start? Discover why Kings Court World School is the top choice in Golyawas. Explore our unique curriculum, safety, and vision for future leaders.</p>
+                    <a href="https://www.kingscourtworldschool.com/best-pre-school-in-golyawas-mansarovar-jaipur" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Events</span>
+                    <img src="gallery/IMG-20251229-WA0055.jpeg" alt="School Events">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Top Kindergarten near Vandemataram Circle Mansarovar</h3>
+                    <p>Looking for the best start? Discover why Kings Court World School is the top choice near Vandemataram Circle. Explore our NEP-aligned curriculum and holistic growth. </p>
+                    <a href="https://www.kingscourtworldschool.com/top-kindergarten-near-vandemataram-circle-mansarovar" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Events & Celebrations</span>
+                    <img src="gallery/11ddb360-4789-4c0a-a9b1-9baccf2ceb7a.jpg" alt="Holistic Development">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Why We Are the Best Play School near Patrakar Colony Jaipur</h3>
+                    <p>For families seeking the best play school near Patrakar Colony Jaipur, Kings Court World School offers a perfect blend of vibrant events and academic excellence.</p>
+                    <a href="https://www.kingscourtworldschool.com/best-play-school-near-patrakar-colony-jaipur" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Nutrition</span>
+                    <img src="gallery/IMG_5215.jpg" alt="Healthy Kids">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Affordable Preschool in Mansarovar Extension: Quality Meets Value</h3>
+                    <p>Discover the best affordable preschool in Mansarovar Extension. Quality NEP-aligned learning at Kings Court World School that fits your budget.</p>
+                    <a href="https://www.kingscourtworldschool.com/affordable-preschool-in-mansarovar-extension-jaipur" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Community</span>
+                    <img src="gallery/fe70323a-3dcd-400b-8bd1-60a2c8c6eea4.jpg" alt="Social Values">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Why Quality Matters: Top Rated Pre School near Shipra Pathe</h3>
+                    <p>Discover what makes a preschool exceptional. Our dynamic activities and expert-led curriculum create a world-class foundation for your child.</p>
+                    <a href="https://www.kingscourtworldschool.com/top-rated-pre-school-near-shipra-path-mansarovar" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Academics</span>
+                    <img src="gallery/48da970f-0772-4d6c-91a2-cb8780f96d93.jpg" alt="Parenting Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>A Nurturing Start: The Best Nursery School near Dholai Mansarovar</h3>
+                    <p>Looking for the best start? Discover why Kings Court World School is the top choice in Dholai Mansarovar. Explore our unique curriculum, safety, and vision for future leaders.</p>
+                    <a href="https://www.kingscourtworldschool.com/Best-Nursery-School-near-Dholai-Mansarovar" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Early Years</span>
+                    <img src="gallery/IMG_0804.jpg" alt="Parenting Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>A Joyful Journey: Best Playgroup School for Toddler in Mansarovar</h3>
+                    <p>Looking for the best start? Discover why Kings Court World School is the top choice for toddlers. Explore our unique curriculum, safety, and vision for happy young learners and growing leaders.</p>
+                    <a href="https://www.kingscourtworldschool.com/Best-Playgroup-School-for-Toddlers-in-Mansarovar-Jaipur" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+               <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">School Life</span>
+                    <img src="gallery/IMG-20251017-WA0017.jpeg" alt="Parenting Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Nature-Inspired Learning: Top Preschool near City Park Mansarovar Jaipur</h3>
+                    <p>Looking for the best start? Discover why Kings Court World School is the top choice for toddlers. Explore our unique curriculum, safety, and vision for happy young learners and growing leaders.</p>
+                    <a href="https://www.kingscourtworldschool.com/Top-Preschool-near-City-Park-Mansarovar-Jaipur" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+             <div class="blog-card">
+                <div class="blog-img-container">
+                    <span class="blog-tag">Academics</span>
+                    <img src="gallery/IMG_5066.jpg" alt="Parenting Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-user"></i> KCWS Team</span>
+                    </div>
+                    <h3>Top Rated Primary School near Vandemataram Circle Jaipur</h3>
+                    <p>Looking for excellence? Discover why Kings Court World School is the top choice near Vandemataram Circle. Explore our unique curriculum and vision for future leaders.</p>
+                    <a href="https://www.kingscourtworldschool.com/Top-Rated-Primary-School-near-Vandemataram-Circle-Jaipur" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </section>
+
+    <div id="footer-root"></div>
+
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
+
+</body>
+</html>

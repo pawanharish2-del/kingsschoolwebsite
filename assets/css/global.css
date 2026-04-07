@@ -1,0 +1,380 @@
+/* 
+    Kings Court World School - Global Styles
+    Maintained in STRICT CLEANUP mode.
+    Do NOT change colors or design.
+*/
+
+:root {
+    /* Exact Google Logo Theme Colors - NO VARIATIONS */
+    --google-blue: #4285F4;
+    --google-red: #EA4335;
+    --google-yellow: #FBBC05;
+    --google-green: #34A853;
+    
+    /* Core Mapping */
+    --primary: var(--google-blue);
+    --secondary: var(--google-red);
+    --accent: var(--google-yellow);
+    
+    --dark: #202124;         
+    --light: #F8F9FA;        
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+/* --- Scroll Reveal Animation --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--primary);
+    color: white;
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1001;
+}
+
+.top-bar a:hover {
+    color: var(--accent);
+}
+
+.top-bar-right.social-top {
+    display: flex;
+    gap: 15px;
+}
+
+.top-bar-right.social-top a {
+    font-size: 1.1rem;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+    background: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item > a {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 0;
+    display: block;
+}
+
+.nav-item > a:hover {
+    color: var(--google-red);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 10px 0;
+    z-index: 9999;
+    border-top: 4px solid var(--google-green);
+    list-style: none;
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+.dropdown-menu li a {
+    padding: 8px 20px;
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.dropdown-menu li a:hover {
+    background: var(--light);
+    color: var(--google-blue);
+    padding-left: 25px;
+}
+
+.cta-btn {
+    background-color: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.2); 
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.2);
+}
+
+/* --- Sticky Sidebar --- */
+#side-quick-links {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+#side-quick-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    list-style: none;
+}
+#side-quick-links ul li {
+    background: var(--white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px 5px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
+#side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
+#side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
+
+#side-quick-links ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+#side-quick-links ul li.call i { color: var(--google-blue); }
+#side-quick-links ul li.marker i { color: var(--google-red); }
+#side-quick-links ul li.whatapp i { color: var(--google-green); }
+
+#side-quick-links i { font-size: 1.2rem; min-width: 50px; text-align: center; transition: 0.3s; }
+#side-quick-links ul li:hover i { color: white; }
+
+#side-quick-links .content {
+    white-space: nowrap;
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+#side-quick-links ul li:hover .content { opacity: 1; }
+
+/* --- Footer --- */
+footer {
+    background-color: #4285f4;
+    color: white;
+    padding: 4rem 5% 2rem 5%;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-wave {
+    position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+}
+.footer-wave svg { display: block; width: calc(100% + 1.3px); height: 80px; }
+.footer-wave path { fill: var(--light); }
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-col { flex: 1; min-width: 250px; }
+.footer-col h3 { color: var(--google-yellow); margin-bottom: 1.5rem; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.8rem; }
+.footer-col a { color: #ccc; }
+.footer-col a:hover { color: var(--white); }
+
+.social-links a {
+    display: inline-flex; width: 35px; height: 35px; background: rgba(255, 255, 255, 0.2);
+    color: white; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;
+}
+.social-links a:hover { background: white; color: var(--google-blue); transform: translateY(-3px); }
+
+.copyright {
+    text-align: center; margin-top: 3rem; padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem; color: #ffffff; opacity: 0.9;
+}
+
+/* --- Mobile Menu --- */
+.hamburger { 
+    display: none; 
+    font-size: 1.8rem; 
+    cursor: pointer; 
+    color: var(--google-blue); 
+    z-index: 1002;
+    padding: 10px;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .logo { max-width: 70%; }
+    .logo img { max-width: 100%; height: auto !important; }
+    .hamburger { display: block; }
+
+    .nav-links {
+        display: block; /* Use block for vertical layout */
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background: white; 
+        padding: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        visibility: hidden;
+    }
+    
+    .nav-links.active {
+        max-height: 100vh;
+        padding-bottom: 2rem;
+        visibility: visible;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-item > a {
+        padding: 15px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropdown-menu { 
+        position: static; 
+        box-shadow: none; 
+        padding: 0; 
+        border-top: none; 
+        background: #f9f9f9; 
+        display: none; /* Controlled by JS */
+        overflow: hidden;
+        transform: none !important;
+        animation: none !important;
+        min-width: 100%;
+        border-radius: 0;
+    }
+    
+    .dropdown-menu.open {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 12px 10%;
+    }
+
+    .nav-links li:last-child {
+        padding: 20px 5%;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top-bar { justify-content: space-between; padding: 10px 5%; }
+    .top-bar-right { display: none; }
+}
+
+@media (max-width: 768px) {
+    .section { padding: 3rem 5%; }
+    #side-quick-links { display: none; }
+    .footer-wave svg { height: 50px; }
+}
+
+/* Fix for Overflow issues mentioned in Task 4 */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

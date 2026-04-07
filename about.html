@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Kings Court World School | Best International School in Jaipur</title>
+    <meta name="description" content="Learn about Kings Court World School in Badpitawas, Jaipur. Discover our vision, mission, and integrated international curriculum designed for the holistic development of your child.">
+    <meta name="keywords" content="About Kings Court World School, Best International School Jaipur, KCWS Vision and Mission, Top School in Badpitawas, Holistic Education Jaipur">
+    <meta name="author" content="Kings Court World School">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/favKCWS.png">
+    <link rel="apple-touch-icon" href="/favKCWS.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+
+    <style>
+        /* --- Page Specific Styles (About) --- */
+
+        /* --- Inner Banner (Solid Color, No Gradients, FIXED PADDING) --- */
+        .inner-banner {
+            position: relative;
+            height: 35vh;              /* Increased height */
+            min-height: 280px;         /* Increased minimum height */
+            background-color: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 40px;
+            padding-bottom: 70px;      /* Pushes text safely above the wave */
+        }
+
+        .inner-banner-content {
+            z-index: 10;
+            position: relative;
+            animation: popIn 1s ease-out;
+            margin-bottom: 40px;       /* Extra breathing room from the wave */
+        }
+
+        .inner-banner h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 0;
+            color: var(--google-yellow);
+        }
+
+        /* Banner Clouds */
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.6;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 25s; }
+        .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+        .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
+        .cloud.two { width: 120px; height: 50px; top: 30%; right: -120px; animation-duration: 30s; animation-direction: reverse; }
+        .cloud.two::after { width: 60px; height: 60px; top: -30px; left: 20px; }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* Wave Divider */
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        .wave-container svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- About Main Text --- */
+        .section { padding: 5rem 10%; position: relative; }
+        .about-main-text { text-align: center; max-width: 900px; margin: 0 auto; }
+        .about-main-text h2 { color: var(--dark); font-size: 2.8rem; margin-bottom: 2rem; }
+        .about-main-text h2 span { color: var(--google-blue); }
+        .about-main-text p { font-size: 1.15rem; color: #555; margin-bottom: 1.5rem; }
+
+        /* --- Vision & Mission --- */
+        .mvv-section {
+            background-color: #FFFFFF;
+            padding: 5rem 10%;
+            position: relative;
+            border-bottom: 1px solid #E8EAED;
+        }
+        
+        .wave-top {
+            position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);
+        }
+        .wave-top svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+        .wave-top .shape-fill { fill: var(--light); }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .vm-card {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .vm-card:nth-child(1) { border-bottom: 6px solid var(--google-blue); }
+        .vm-card:nth-child(2) { border-bottom: 6px solid var(--google-red); }
+        .vm-card:hover { transform: translateY(-10px); }
+
+        .vm-card h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vm-card h3 i {
+            color: var(--white);
+            width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        .vm-card:nth-child(1) h3 i { background-color: var(--google-blue); }
+        .vm-card:nth-child(2) h3 i { background-color: var(--google-red); }
+
+        .vm-card p { font-size: 1.05rem; color: #666; line-height: 1.7; }
+
+        /* --- Core Values --- */
+        .values-section {
+            background-color: var(--light);
+            padding: 5rem 10%;
+            text-align: center;
+        }
+
+        .values-section h2 { color: var(--dark); font-size: 2.8rem; margin-bottom: 3rem; }
+        .values-section h2 span { color: var(--google-yellow); }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid transparent;
+        }
+
+        .value-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+        .value-card:nth-child(4n+1) { border-top-color: var(--google-blue); }
+        .value-card:nth-child(4n+1) h4 i { color: var(--google-blue); }
+        .value-card:nth-child(4n+2) { border-top-color: var(--google-red); }
+        .value-card:nth-child(4n+2) h4 i { color: var(--google-red); }
+        .value-card:nth-child(4n+3) { border-top-color: var(--google-yellow); }
+        .value-card:nth-child(4n+3) h4 i { color: var(--google-yellow); }
+        .value-card:nth-child(4n+4) { border-top-color: var(--google-green); }
+        .value-card:nth-child(4n+4) h4 i { color: var(--google-green); }
+
+        .value-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+        }
+
+        .value-card p { font-size: 0.95rem; color: #666; }
+
+        @media (max-width: 992px) {
+            .values-grid, .vm-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Small Devices / Phones */
+        @media (max-width: 768px) {
+            .section, .mvv-section, .values-section { padding: 3rem 5%; }
+            .inner-banner h1 { font-size: 2.5rem; }
+            .about-main-text h2, .values-section h2 { font-size: 2rem; }
+            .vm-card { padding: 2rem; }
+            .value-card { padding: 1.5rem; }
+        }
+    </style>
+
+
+        /* --- Inner Banner (Solid Color, No Gradients, FIXED PADDING) --- */
+        .inner-banner {
+            position: relative;
+            height: 35vh;              /* Increased height */
+            min-height: 280px;         /* Increased minimum height */
+            background-color: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding-top: 40px;
+            padding-bottom: 70px;      /* Pushes text safely above the wave */
+        }
+
+        .inner-banner-content {
+            z-index: 10;
+            position: relative;
+            animation: popIn 1s ease-out;
+            margin-bottom: 40px;       /* Extra breathing room from the wave */
+        }
+
+        .inner-banner h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 0;
+            color: var(--google-yellow);
+        }
+
+        /* Banner Clouds */
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.6;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 25s; }
+        .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+        .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
+        .cloud.two { width: 120px; height: 50px; top: 30%; right: -120px; animation-duration: 30s; animation-direction: reverse; }
+        .cloud.two::after { width: 60px; height: 60px; top: -30px; left: 20px; }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* Wave Divider */
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        .wave-container svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        /* --- About Main Text --- */
+        .section { padding: 5rem 10%; position: relative; }
+        .about-main-text { text-align: center; max-width: 900px; margin: 0 auto; }
+        .about-main-text h2 { color: var(--dark); font-size: 2.8rem; margin-bottom: 2rem; }
+        .about-main-text h2 span { color: var(--google-blue); }
+        .about-main-text p { font-size: 1.15rem; color: #555; margin-bottom: 1.5rem; }
+
+        /* --- Vision & Mission --- */
+        .mvv-section {
+            background-color: #FFFFFF;
+            padding: 5rem 10%;
+            position: relative;
+            border-bottom: 1px solid #E8EAED;
+        }
+        
+        .wave-top {
+            position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg);
+        }
+        .wave-top svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+        .wave-top .shape-fill { fill: var(--light); }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .vm-card {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .vm-card:nth-child(1) { border-bottom: 6px solid var(--google-blue); }
+        .vm-card:nth-child(2) { border-bottom: 6px solid var(--google-red); }
+        .vm-card:hover { transform: translateY(-10px); }
+
+        .vm-card h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vm-card h3 i {
+            color: var(--white);
+            width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        .vm-card:nth-child(1) h3 i { background-color: var(--google-blue); }
+        .vm-card:nth-child(2) h3 i { background-color: var(--google-red); }
+
+        .vm-card p { font-size: 1.05rem; color: #666; line-height: 1.7; }
+
+        /* --- Core Values --- */
+        .values-section {
+            background-color: var(--light);
+            padding: 5rem 10%;
+            text-align: center;
+        }
+
+        .values-section h2 { color: var(--dark); font-size: 2.8rem; margin-bottom: 3rem; }
+        .values-section h2 span { color: var(--google-yellow); }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid transparent;
+        }
+
+        .value-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+        .value-card:nth-child(4n+1) { border-top-color: var(--google-blue); }
+        .value-card:nth-child(4n+1) h4 i { color: var(--google-blue); }
+        .value-card:nth-child(4n+2) { border-top-color: var(--google-red); }
+        .value-card:nth-child(4n+2) h4 i { color: var(--google-red); }
+        .value-card:nth-child(4n+3) { border-top-color: var(--google-yellow); }
+        .value-card:nth-child(4n+3) h4 i { color: var(--google-yellow); }
+        .value-card:nth-child(4n+4) { border-top-color: var(--google-green); }
+        .value-card:nth-child(4n+4) h4 i { color: var(--google-green); }
+
+        .value-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+</head>
+<body>
+
+    <div id="header-root"></div>
+
+    <section class="inner-banner">
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+        
+        <div class="inner-banner-content">
+            <h1>About Us</h1>
+        </div>
+
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="about-main-text">
+            <h2>About <span style="color: var(--google-blue);">Kings Court World School</span></h2>
+            <p>Kings Court World School proudly holds the rare distinction of being the first school in Jaipur, Rajasthan to offer an Integrated International Curriculum that weaves the most exemplary teaching practices into our classrooms.</p>
+            <p>It is no mean feat that the KCWS environment carefully blends together the best practices of the highly sought after Finnish Education System, the Reggio Emilia philosophy and the infallible Montessori approach.</p>
+            <p>Aligned with the National Education Policy 2020, the school implements a gold mine of relevant and meaningful models of learning that guarantee Holistic Development of the child. Students of KCWS benefit gigantically from this multi-pronged approach that grooms them for a life of success.</p>
+        </div>
+    </section>
+
+    <section class="mvv-section">
+        <div class="wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="vm-grid">
+            <div class="vm-card">
+                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                <p>To create Critical and Creative Thinkers that are groomed to seamlessly navigate through and achieve the ever evolving Global parameters of Education. Kings Court World School aims to drive the highest potential of every student and ignite a purpose that burns bright for a lifetime. A holistic, highly impressive and innovative approach to learning is what would make KCWS student poised to face challenges. Learning at Kings Court is tailored to harness every student’s unique strengths and help them achieve Academic, Social and Emotional prosperity.</p>
+            </div>
+            <div class="vm-card">
+                <h3><i class="fas fa-rocket"></i> Our Mission</h3>
+                <p>The race for excellence is one without a finish line and this encapsulates the Mission of Kings Court World School where we are on an endless quest of immenseness in all we do. We set gold standards of Heuristic Learning environment with Premium facilities to build Scientific Temperament and Social Consciousness in our kids of varied age groups. It is coupled with one Comprehensive Curriculum designed to educate the 21st Century Skilled kids enabling them to thrive in the Global Community and Economy of tomorrow.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2>Our Core <span style="color: var(--google-yellow);">Values & Ethos</span></h2>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <h4><i class="fas fa-hand-holding-heart"></i> Care</h4>
+                <p>For us, CARE means valuing every child’s unique abilities and creating a safe and secure environment. We let kids learn at their own pace. Our focus on holistic learning and growth extends to every teacher, school and program head involved in the growth and wellbeing of the child.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-lightbulb"></i> Curiosity</h4>
+                <p>A happy and fulfilling learning environment is rooted in curiosity and letting children grow through their individual experiences. We encourage children to keep asking questions and for teachers to find unique ways to answer.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-globe-asia"></i> Culture</h4>
+                <p>We build an inclusive space to enable rich and diverse experiences for children. Rooted in the value of learning, CULTURE for us means to be inclusive and bring equal acceptance to everyone involved in teaching and learning. We ensure that kids learn from different cultures and traditions.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-users"></i> Coexist</h4>
+                <p>Social conscious is any progressive society’s basic requisite. Therefore, Social Values like brotherhood, tolerance and co-existence would be gradually instilled in our students’ sight from the very beginning.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-people-carry"></i> Collaborate</h4>
+                <p>Collaboration augments growth and productivity. No one can grow in isolation. Collaborative working creates synergy because of combined efforts. In schools amongst students it is the strongest core philosophy which teaches many a life skills.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-leaf"></i> Evolve</h4>
+                <p>Learning is a process of evolving and developing. This is why we encourage children to be adaptable and independent for the ever changing future.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-root"></div>
+
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
+
+</body>
+</html>

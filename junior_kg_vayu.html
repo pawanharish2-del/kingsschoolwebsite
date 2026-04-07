@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Coming Soon | Kings Court World School</title>
+    <meta name="description" content="We are working on something exciting at Kings Court World School. Check back soon!">
+    <meta name="author" content="Kings Court World School">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="icon" type="image/png" href="/favKCWS.png">
+    <link rel="apple-touch-icon" href="/favKCWS.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+
+    <style>
+        /* --- Page Specific Styles (Coming Soon) --- */
+
+        .main-content {
+            flex: 1; /* Pushes footer to the bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .coming-soon-banner {
+            position: relative;
+            flex: 1;
+            min-height: 70vh;              
+            background-color: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding: 80px 5% 100px 5%;      
+        }
+
+        .coming-soon-content {
+            z-index: 10;
+            position: relative;
+            animation: popIn 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+            max-width: 700px;
+        }
+
+        .coming-soon-content h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            text-shadow: 3px 4px 0px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+            color: var(--google-yellow);
+            line-height: 1.1;
+            font-family: 'Bubblegum Sans', cursive;
+            letter-spacing: 1px;
+        }
+
+        .coming-soon-content p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            background-color: white;
+            color: var(--google-blue);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 15px 35px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-5px);
+            background-color: var(--google-yellow);
+            color: var(--dark);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Animated Background Elements */
+        .cloud {
+            position: absolute; background: white; border-radius: 50px; opacity: 0.5;
+            animation: moveCloud linear infinite;
+        }
+        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
+        
+        .cloud.one { width: 180px; height: 70px; top: 15%; left: -200px; animation-duration: 35s; }
+        .cloud.one::after { width: 90px; height: 90px; top: -45px; left: 35px; }
+        .cloud.one::before { width: 60px; height: 60px; top: -30px; right: 30px; }
+        
+        .cloud.two { width: 120px; height: 50px; top: 40%; right: -150px; animation-duration: 25s; animation-direction: reverse; opacity: 0.4;}
+        .cloud.two::after { width: 60px; height: 60px; top: -30px; left: 20px; }
+
+        .cloud.three { width: 140px; height: 55px; bottom: 25%; left: -150px; animation-duration: 40s; animation-delay: 5s;}
+        .cloud.three::after { width: 70px; height: 70px; top: -35px; left: 25px; }
+
+        .rocket-icon {
+            position: absolute;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            color: var(--google-red);
+            top: 20%;
+            right: 15%;
+            animation: floatRocket 6s ease-in-out infinite alternate;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+            z-index: 5;
+        }
+
+        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
+        @keyframes popIn { 0% { transform: scale(0.8) translateY(30px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }
+        @keyframes floatRocket { 0% { transform: translateY(0) rotate(15deg); } 100% { transform: translateY(-30px) rotate(25deg); } }
+
+        /* Wave Divider */
+        .wave-container {
+            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 15;
+        }
+        .wave-container svg { display: block; width: calc(100% + 1.3px); height: clamp(40px, 8vw, 80px); }
+        .wave-container .shape-fill { fill: var(--light); }
+
+        @media (max-width: 768px) {
+            .coming-soon-banner { padding: 60px 5% 80px 5%; min-height: 60vh;}
+            .rocket-icon { opacity: 0.3; } /* Make it less prominent on tiny screens */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-root"></div>
+
+
+    <div class="main-content">
+        <section class="coming-soon-banner">
+            
+            <div class="cloud one"></div>
+            <div class="cloud two"></div>
+            <div class="cloud three"></div>
+            
+            <i class="fas fa-rocket rocket-icon"></i>
+
+            <div class="coming-soon-content">
+                <h1>Coming Soon!</h1>
+                <p>We are currently crafting something wonderful and educational for this page. Our little learners are helping us put the pieces together. Please check back a little later!</p>
+                
+                <a href="index.html" class="btn-home">
+                    <i class="fas fa-home"></i> Return to Homepage
+                </a>
+            </div>
+
+            <div class="wave-container">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer-root"></div>
+
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
+
+</body>
+</html>
