@@ -19,11 +19,7 @@
     <link rel="icon" type="image/png" href="/favKCWS.png">
     <link rel="apple-touch-icon" href="/favKCWS.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <script type="application/ld+json">
     {
@@ -54,227 +50,120 @@
     </script>
 
     <style>
-        :root {
-            /* Exact Google Logo Theme Colors - NO VARIATIONS */
-            --google-blue: #4285F4;
-            --google-red: #EA4335;
-            --google-yellow: #FBBC05;
-            --google-green: #34A853;
-            
-            /* Core Mapping */
-            --primary: var(--google-blue);
-            --secondary: var(--google-red);
-            --accent: var(--google-yellow);
-            
-            --dark: #202124;         
-            --light: #F8F9FA;        
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Fredoka', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Bubblegum Sans', cursive;
-            letter-spacing: 1px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-
-        /* --- Top Bar --- */
-        .top-bar {
-            background-color: var(--primary);
-            color: white;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .top-bar a:hover {
-            color: var(--accent);
-        }
-
-        .top-bar-right.social-top {
-            display: flex;
-            gap: 15px;
-        }
-
-        .top-bar-right.social-top a {
-            font-size: 1.1rem;
-        }
-
-        /* --- Navigation --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 5%;
-            background: rgba(255, 255, 255, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-item { position: relative; }
-        .nav-item > a {
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 10px 0;
-            display: block;
-        }
-        .nav-item > a:hover { color: var(--google-red); }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%; left: 0;
-            background: white;
-            min-width: 220px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            padding: 10px 0;
-            z-index: 9999;
-            border-top: 4px solid var(--google-green);
-            list-style: none;
-            margin: 0; 
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-item:hover .dropdown-menu { display: block; animation: fadeInUp 0.3s ease; }
-        .dropdown-menu li a { padding: 8px 20px; display: block; font-size: 0.9rem; color: #555; }
-        .dropdown-menu li a:hover { background: var(--light); color: var(--google-blue); padding-left: 25px; }
-
-        .cta-btn {
-            background-color: var(--primary);
-            color: white !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-weight: bold;
-            box-shadow: 0 4px 0 rgba(0,0,0,0.2);
-            display: inline-block;
-        }
-        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(0,0,0,0.2); }
-
-        /* --- Sticky Sidebar --- */
-        #side-quick-links { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 999; }
-        #side-quick-links ul { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; list-style: none; }
-        #side-quick-links ul li {
-            background: var(--white); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
-            box-shadow: -2px 5px 15px rgba(0,0,0,0.15); transition: all 0.3s;
-            border-top-left-radius: 25px; border-bottom-left-radius: 25px; overflow: hidden; cursor: pointer;
-        }
-        
-        #side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
-        #side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
-        #side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
-        
-        #side-quick-links ul li a { display: flex; align-items: center; width: 100%; height: 100%; text-decoration: none; }
-        #side-quick-links ul li.call i { color: var(--google-blue); }
-        #side-quick-links ul li.marker i { color: var(--google-red); }
-        #side-quick-links ul li.whatapp i { color: var(--google-green); }
-        
-        #side-quick-links i { font-size: 1.2rem; min-width: 50px; text-align: center; transition: 0.3s; }
-        #side-quick-links ul li:hover i { color: white; }
-        #side-quick-links .content { white-space: nowrap; color: white; opacity: 0; transition: 0.3s; }
-        #side-quick-links ul li:hover .content { opacity: 1; }
+        /* --- Page Specific Styles (SEO) --- */
 
         /* --- Inner Banner --- */
         .inner-banner {
-            position: relative;
-            height: 35vh;              
-            min-height: 280px;         
+            position: relative; 
+            height: auto; 
+            min-height: 250px; 
             background-color: var(--google-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
             text-align: center;
-            color: white;
-            overflow: hidden;
-            padding-top: 40px;
-            padding-bottom: 70px;      
+            color: white; 
+            overflow: hidden; 
+            padding-top: 40px; 
+            padding-bottom: 50px; 
         }
 
         .inner-banner-content {
-            z-index: 10;
-            position: relative;
-            animation: popIn 1s ease-out;
-            margin-bottom: 40px;       
+            z-index: 10; 
+            position: relative; 
+            animation: popIn 1s ease-out; 
+            margin-bottom: 40px; 
+            max-width: 900px; 
+            padding: 0 20px;
         }
 
         .inner-banner h1 {
-            font-size: 3.5rem;
-            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-            margin-bottom: 0;
-            color: var(--google-yellow);
+            font-size: 3rem; 
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2); 
+            margin-bottom: 10px; 
+            color: var(--google-yellow); 
+            line-height: 1.2;
         }
 
-        .cloud {
-            position: absolute; background: white; border-radius: 50px; opacity: 0.6;
-            animation: moveCloud linear infinite;
+        .cloud { 
+            position: absolute; 
+            background: white; 
+            border-radius: 50px; 
+            opacity: 0.6; 
+            animation: moveCloud linear infinite; 
         }
-        .cloud::after, .cloud::before { content: ''; position: absolute; background: white; border-radius: 50%; }
-        .cloud.one { width: 150px; height: 60px; top: 15%; left: -150px; animation-duration: 25s; }
+
+        .cloud::after, .cloud::before { 
+            content: ''; 
+            position: absolute; 
+            background: white; 
+            border-radius: 50%; 
+        }
+
+        .cloud.one { 
+            width: 150px; 
+            height: 60px; 
+            top: 15%; 
+            left: -150px; 
+            animation-duration: 25s; 
+        }
+
         .cloud.one::after { width: 70px; height: 70px; top: -35px; left: 25px; }
         .cloud.one::before { width: 50px; height: 50px; top: -25px; right: 25px; }
-        .cloud.two { width: 120px; height: 50px; top: 30%; right: -120px; animation-duration: 30s; animation-direction: reverse; }
+        
+        .cloud.two { 
+            width: 120px; 
+            height: 50px; 
+            top: 30%; 
+            right: -120px; 
+            animation-duration: 30s; 
+            animation-direction: reverse; 
+        }
+
         .cloud.two::after { width: 60px; height: 60px; top: -30px; left: 20px; }
 
-        @keyframes moveCloud { 0% { left: -200px; } 100% { left: 110%; } }
-        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-
-        .wave-container {
-            position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        @keyframes moveCloud { 
+            0% { left: -200px; } 
+            100% { left: 110%; } 
         }
-        .wave-container svg { display: block; width: calc(100% + 1.3px); height: 60px; }
-        .wave-container .shape-fill { fill: var(--light); }
 
-        /* =========================================
-           --- SINGLE BLOG POST: CARD STYLE ---
-           ========================================= */
+        @keyframes popIn { 
+            0% { transform: scale(0.8); opacity: 0; } 
+            100% { transform: scale(1); opacity: 1; } 
+        }
+
+        /* Wave Divider */
+        .wave-container { 
+            position: absolute; 
+            bottom: -1px; 
+            left: 0; 
+            width: 100%; 
+            overflow: hidden; 
+            line-height: 0; 
+        }
+
+        .wave-container svg { 
+            display: block; 
+            width: calc(100% + 1.3px); 
+            height: 60px; 
+        }
+
+        .wave-container .shape-fill { 
+            fill: var(--light); 
+        }
+
+        /* --- Single Blog Content Area --- */
+        .section { 
+            padding: 4rem 5%; 
+            position: relative; 
+        }
+        
         .blog-single-container {
-            max-width: 900px; /* Centered, optimal reading width */
+            max-width: 900px; 
             margin: 0 auto;
-            padding: 4rem 5%;
+            position: relative;
+            z-index: 20;
+            margin-top: -80px;
         }
 
         .blog-card-style {
@@ -305,9 +194,9 @@
             margin-bottom: 1.5rem;
         }
 
-        .post-header h1 {
+        .post-header h2 {
             font-family: 'Bubblegum Sans', cursive;
-            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
             color: var(--dark);
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -349,7 +238,7 @@
             line-height: 1.8;
         }
 
-        .post-body h2 {
+        .post-body h3 {
             font-family: 'Bubblegum Sans', cursive;
             font-size: 2.2rem;
             color: var(--google-red);
@@ -357,7 +246,7 @@
             line-height: 1.3;
         }
 
-        .post-body h3 {
+        .post-body h4 {
             font-family: 'Fredoka', sans-serif;
             font-size: 1.6rem;
             color: var(--google-blue);
@@ -422,9 +311,9 @@
             border-radius: 50%; color: white; transition: 0.3s;
         }
 
-        .share-buttons a.fb { background-color: #3b5998; }
-        .share-buttons a.tw { background-color: #1da1f2; }
-        .share-buttons a.wa { background-color: #25d366; }
+        .share-fb { background-color: #3b5998; }
+        .share-tw { background-color: #1da1f2; }
+        .share-wa { background-color: #25d366; }
         .share-buttons a:hover { transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
 
         /* --- Return Link --- */
@@ -446,138 +335,28 @@
             transform: translateX(-5px);
         }
 
-        /* --- Footer --- */
-        footer {
-            background-color: #4285f4; color: white; padding: 4rem 5% 2rem 5%; position: relative; margin-top: 0;
-        }
-        .footer-wave { position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; }
-        .footer-wave svg { display: block; width: calc(100% + 1.3px); height: 80px; }
-        .footer-wave path { fill: var(--light); } 
-
-        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
-        .footer-col { flex: 1; min-width: 250px; }
-        .footer-col h3 { color: var(--google-yellow); margin-bottom: 1.5rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.8rem; }
-        .footer-col a { color: #ccc; }
-        .footer-col a:hover { color: var(--google-blue); }
-
-        .social-links a {
-            display: inline-flex; width: 35px; height: 35px; background: rgba(255, 255, 255, 0.2); 
-            color: white; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;
-        }
-        .social-links a:hover { background: white; color: var(--google-blue); transform: translateY(-3px); }
-
-        .copyright {
-            text-align: center; margin-top: 3rem; padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem; color: #ffffff; opacity: 0.9;
-        }
-
-        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: var(--google-blue); margin-left: auto; padding-right: 10px; }
-        
-        /* --- RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 992px) {
-            .logo { max-width: 75%; } 
-            .logo img { max-width: 100%; height: auto !important; }
-            .hamburger { display: block; margin-left: auto; padding-left: 15px; padding-right: 0; }
-            
-            .nav-links {
-                display: none; flex-direction: column; position: absolute;
-                top: 100%; left: 0; width: 100%; background: white; padding: 1rem 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-            .nav-links.active { display: flex; }
-            .dropdown-menu { position: static; box-shadow: none; padding-left: 20px; border-top: none; background: #f9f9f9; }
-            
-            .top-bar { justify-content: space-between; padding: 10px 5%; }
-            .top-bar-right { display: none; }
+            .blog-card-content { padding: 2.5rem 2rem; }
         }
 
         @media (max-width: 768px) {
-            .inner-banner h1 { font-size: 2.5rem; }
-            .post-header h1 { font-size: 1.8rem; }
+            .section { padding: 3rem 5%; }
+            .inner-banner h1 { font-size: 2.2rem; }
+            .blog-card-content { padding: 2rem 1.5rem; }
+            .post-body h3 { font-size: 1.8rem; }
             .post-body p { font-size: 1.05rem; }
-            .blog-single-container { padding: 3rem 5%; }
-            .blog-card-content { padding: 2.5rem 1.5rem; } /* Less padding on mobile */
-            #side-quick-links { display: none; }
         }
     </style>
 </head>
 <body>
-
-    <div id="side-quick-links">
-        <ul>
-            <li class="call">
-                <a href="tel:+917665083556">
-                    <i class="fa fa-phone"></i>
-                    <div class="content">+91-76650 83556</div>
-                </a>
-            </li>
-            <li class="marker">
-                <a href="enquiry.html">
-                    <i class="fa fa-file-lines"></i>
-                    <div class="content">Apply Now</div>
-                </a>
-            </li>
-            <li class="whatapp">
-                <a href="https://wa.me/917665083556" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <div class="content">WhatsApp</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <a href="tel:+917665083556"><i class="fa fa-phone"></i> +91-76650 83556</a>
-        </div>
-        <div class="top-bar-right social-top">
-            <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-
-    <nav>
-        <div class="logo">
-            <a href="/">
-                <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-            </a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="about.html">About us</a></li>
-            
-            <li class="nav-item">
-                <a href="javascript:void(0)">Programs <i class="fa fa-angle-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="playgroup_jal.html">Playgroup – Jal</a></li>
-                    <li><a href="nursery_agni.html">Nursery – Agni</a></li>
-                    <li><a href="junior_kg_vayu.html">Junior KG – Vayu</a></li>
-                    <li><a href="senior_kg_akash.html">Senior KG – Akash</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item"><a href="enquiry.html">Admissions</a></li>
-            
-            <li class="nav-item"><a href="gallery.php">Gallery</a></li>
-            <li class="nav-item"><a href="blog.html">Blogs</a></li>
-                
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
-            <li><a href="enquiry.html" class="cta-btn">Apply Online</a></li>
-        </ul>
-    </nav>
+    <div id="header-root"></div>
 
     <section class="inner-banner">
         <div class="cloud one"></div>
         <div class="cloud two"></div>
         
         <div class="inner-banner-content">
-            <h1>KCWS Insights</h1>
+            <h1>Why Early Education Matters</h1>
         </div>
 
         <div class="wave-container">
@@ -594,7 +373,7 @@
                 
                 <div class="post-header">
                     <span class="blog-tag">Early Education</span>
-                    <h1>The Foundation of Tomorrow: Why Early Childhood Education Matters at the Best Kindergarten in Mansarovar Jaipur</h1>
+                    <h2>The Foundation of Tomorrow: Why Early Childhood Education Matters at the Best Kindergarten in Mansarovar Jaipur</h2>
                     
                     <div class="post-meta">
                         <span><i class="far fa-calendar-alt"></i> March 12, 2026</span>
@@ -604,7 +383,7 @@
                 </div>
 
                 <div class="post-featured-image">
-                    <img src="https://via.placeholder.com/1000x500/E8EAED/4285F4?text=Children+at+the+Best+Kindergarten+in+Mansarovar+Jaipur" alt="Students engaged in play-based learning at Kings Court World School, the top nursery school in Mansarovar Jaipur">
+                    <img src="gallery/IMG_5062.jpg" alt="Children engaged in play-based learning at Kings Court World School">
                 </div>
 
                 <div class="post-body">
@@ -612,7 +391,7 @@
 
                     <p>At <strong>Kings Court World School (KCWS)</strong>, widely recognized as the <strong>best kindergarten in Mansarovar Jaipur</strong>, we recognize the profound, life-long impact these early years have on a child. Early childhood education is not simply about keeping children occupied while parents work; it is about intentionally shaping the architecture of a child's brain. The neural pathways formed during these foundational years become the blueprint for future academic success, relationship building, and emotional resilience.</p>
 
-                    <h2>The Science Behind Early Childhood Development</h2>
+                    <h3>The Science Behind Early Childhood Development</h3>
                     <p>During the first few years of life, a child's brain forms more than one million new neural connections every single second. This rapid pace of development never happens again. When children are exposed to an environment rich in sensory experiences, interactive play, and guided exploration, these neural connections are strengthened. Conversely, a lack of stimulation can hinder a child's potential.</p>
 
                     <p>This is precisely why finding an <strong>inquiry-based early learning center in Jaipur</strong> is essential. Young children are naturally curious. They are little scientists who want to touch, taste, observe, and question the world around them. Traditional rote learning stifles this curiosity. However, an environment that encourages questions and hands-on discovery fuels a lifelong love for learning.</p>
@@ -621,17 +400,17 @@
                         "We do not just teach children how to read and write; we teach them how to think, how to co-exist, and how to evolve into confident global citizens."
                     </blockquote>
 
-                    <h2>Why We Are the Top Nursery School in Mansarovar Jaipur</h2>
+                    <h3>Why We Are the Top Nursery School in Mansarovar Jaipur</h3>
                     <p>Parents researching an <strong>affordable preschool near Vandemataram Circle Jaipur</strong> often ask us what makes our methodology radically different from traditional preschools. The answer lies in our meticulously crafted curriculum.</p>
 
                     <p>We are proud to be a pioneer in the region, offering a deeply integrated, world-class curriculum that thoughtfully weaves together the most effective, globally recognized educational philosophies. By blending the progressive <strong>Finnish Education System</strong>, the child-centric <strong>Reggio Emilia approach</strong>, and the structured independence of a <strong>Montessori integrated kindergarten in Mansarovar</strong>, we have created an unparalleled educational haven.</p>
 
-                    <h3>Decoding Our Reggio Emilia and Montessori Inspired Curriculum</h3>
+                    <h4>Decoding Our Reggio Emilia and Montessori Inspired Curriculum</h4>
                     <p>If you are looking for a <strong>Reggio Emilia inspired preschool in Jaipur</strong>, you likely already know that this philosophy views the child as strong, capable, and resilient, rich with wonder and knowledge. At KCWS, we implement this by allowing the child's own interests to guide their learning journey. We use the environment as the "third teacher," ensuring that every classroom is flooded with natural light, open-ended materials, and spaces that invite collaboration.</p>
 
                     <p>Simultaneously, our Montessori integration ensures that children develop a strong sense of independence and concentration. By using specialized Montessori tools, children learn practical life skills, refine their fine motor abilities, and grasp early mathematical and linguistic concepts at their own unique pace. It is this balance of creative freedom and structured skill-building that makes us the <strong>best play-based learning school in Jaipur</strong>.</p>
 
-                    <h2>The Four Pillars of Learning at KCWS</h2>
+                    <h3>The Four Pillars of Learning at KCWS</h3>
                     <p>To ensure age-appropriate progression, our educational roadmap is thoughtfully categorized into four dynamic stages. For parents seeking <strong>playgroup admission 2026 in Mansarovar Jaipur</strong>, understanding these stages will show you exactly how your child will grow with us:</p>
 
                     <ul>
@@ -641,29 +420,29 @@
                         <li><strong>Senior KG (Akash):</strong> As our students prepare for formal schooling, the 'Akash' stage broadens their horizons. We solidify school readiness through advanced literacy and numeracy concepts, project-based learning, and public speaking opportunities. By the time they graduate from this stage, they are emotionally and academically ready for the challenges of primary school.</li>
                     </ul>
 
-                    <h2>A Truly Holistic Development Preschool in Mansarovar</h2>
+                    <h3>A Truly Holistic Development Preschool in Mansarovar</h3>
                     <p>Academic readiness is only one piece of the puzzle. True early childhood education must nurture the "whole" child. At KCWS, being a <strong>holistic development preschool in Mansarovar</strong> means we place equal emphasis on physical health, emotional intelligence, and social responsibility.</p>
 
                     <p>We actively teach children emotional regulation. Instead of traditional "time-outs," we use reflection corners where children can name their feelings and learn coping strategies. We teach empathy, cultural appreciation, and environmental awareness, ensuring that our students grow up to be compassionate human beings.</p>
 
-                    <h2>Infrastructure That Acts as the "Third Teacher"</h2>
+                    <h3>Infrastructure That Acts as the "Third Teacher"</h3>
                     <p>Learning extends far beyond the four walls of a standard classroom. Because our curriculum aligns deeply with the visionary goals of the National Education Policy (NEP) 2020, we prioritize experiential, hands-on learning over textbook memorization.</p>
 
                     <p>When searching for a <strong>kindergarten with AC classrooms in Mansarovar Jaipur</strong>, parents will be thrilled to discover that KCWS offers much more than just comfort. Our campus is a sprawling landscape of discovery. We feature a state-of-the-art <strong>Space Lab</strong> tailored for young minds to explore basic astronomy and science. Physical development is catered to through our Indoor Soccer arena, Basketball courts, Archery field, and Martial Arts zones.</p>
 
                     <p>Every inch of our campus is designed to stimulate imagination. Whether a child is building resilience on our Adventure Sports track or expressing their creativity in our art and drama corners, the environment is constantly working to challenge and inspire them.</p>
 
-                    <h2>How to Choose the Right Preschool for Your Child</h2>
+                    <h3>How to Choose the Right Preschool for Your Child</h3>
                     <p>With so many options available, choosing the right early education center can feel overwhelming. We advise parents to look beyond colorful walls and focus on the methodology. Ask questions like: "Is the learning child-led or teacher-led?", "How do you handle behavioral challenges?", and "What opportunities do you provide for physical development?"</p>
                     
                     <p>A great preschool will welcome these questions. At Kings Court World School, we maintain absolute transparency with our parent community. We believe that parents are our most valuable partners in the educational journey, and we foster a warm, connected community where open communication is the norm.</p>
 
-                    <h2>Backed by the VA Schools Education System</h2>
+                    <h3>Backed by the VA Schools Education System</h3>
                     <p>Choosing a kindergarten is one of the most critical decisions you will make as a parent. When you choose Kings Court World School, you are not just selecting a local preschool; you are becoming part of an institution guided by the vast expertise of the <strong>VA Schools Education System</strong>.</p>
 
-                    <p>The VA Schools network has extensive experience in successfully leading IB, Cambridge, and CBSE institutions across India. This powerful backing ensures that our kindergarten benefits from globally aligned academic frameworks, rigorous and continuous teacher training, and a structured, transparent governance system that parents can implicitly trust. We bring global exposure right to Jaipur, beautifully blended with deep-rooted Indian values.</p>
+                    <p>The VA Schools network has extensive experience in successfully leading IB, Cambridge, and CBSE institutions across India. This powerful backing ensures that our kindergarten benefits from globally aligned academic frameworks, robust and continuous teacher training, and a structured, transparent governance system that parents can implicitly trust. We bring global exposure right to Jaipur, beautifully blended with deep-rooted Indian values.</p>
 
-                    <h2>Conclusion: Secure Your Child's Future Today</h2>
+                    <h3>Conclusion: Secure Your Child's Future Today</h3>
                     <p>The early years are fleeting, but their impact lasts a lifetime. By investing in high-quality early childhood education, you are gifting your child the tools they need to navigate an ever-changing world with confidence, creativity, and compassion.</p>
 
                     <p>We invite you to visit our campus at Vandemataram Circle, Mansarovar. Come and witness the magic of true inquiry-based learning in action. Speak to our passionate educators, explore our Reggio-inspired classrooms, and see for yourself why we are the trusted choice for hundreds of families.</p>
@@ -683,9 +462,9 @@
                     
                     <div class="share-buttons">
                         <strong>Share:</strong>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kingscourtworldschool.com/importance_of_early_education.html" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/intent/tweet?url=https://kingscourtworldschool.com/importance_of_early_education.html&text=Why%20Early%20Education%20Matters" target="_blank" class="tw"><i class="fab fa-twitter"></i></a>
-                        <a href="https://api.whatsapp.com/send?text=Read%20this%20amazing%20article%20on%20early%20education%20at%20Kings%20Court%20World%20School%20https://kingscourtworldschool.com/importance_of_early_education.html" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kingscourtworldschool.com/importance_of_early_education.html" target="_blank" class="share-fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=https://kingscourtworldschool.com/importance_of_early_education.html&text=Why%20Early%20Education%20Matters" target="_blank" class="share-tw"><i class="fab fa-twitter"></i></a>
+                        <a href="https://api.whatsapp.com/send?text=Read%20this%20amazing%20article%20on%20early%20education%20at%20Kings%20Court%20World%20School%20https://kingscourtworldschool.com/importance_of_early_education.html" target="_blank" class="share-wa"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -698,72 +477,9 @@
 
     </div>
 
-    <footer>
-        <div class="footer-wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
+    <div id="footer-root"></div>
 
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <a href="/">
-                        <img src="/Footerlogo.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="tel:+917665083556"><i class="fa fa-phone"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="enquiry.html">Enroll Now</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Prospectus</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Plot no.- 5, Kings lane, Suraj Vatika, Golyawas, Vandemataram Circle, Mansarovar, Jaipur -302020</li>
-                    <li><i class="fas fa-phone"></i> +91-76650 83556</li>
-                    <li><i class="fas fa-envelope"></i> kingscourtworldschool@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p>Copyright © 2026 Kings Court World School</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Toggle dropdown on mobile click
-        const dropdownToggles = document.querySelectorAll('.nav-item > a');
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                if(window.innerWidth <= 992) {
-                    const dropdown = this.nextElementSibling;
-                    if(dropdown && dropdown.classList.contains('dropdown-menu')) {
-                        e.preventDefault();
-                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
 </body>
 </html>

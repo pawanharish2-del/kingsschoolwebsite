@@ -19,10 +19,7 @@
     <link rel="icon" type="image/png" href="/favKCWS.png">
     <link rel="apple-touch-icon" href="/favKCWS.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <script type="application/ld+json">
     {
@@ -34,7 +31,7 @@
       },
       "headline": "Finding the Best Junior KG (LKG) School Near Vandemataram Circle",
       "description": "A comprehensive guide on what makes Kings Court World School the best choice for Junior KG and LKG admissions near Vandemataram Circle, Mansarovar.",
-      "image": "https://via.placeholder.com/1200x600/E8EAED/4285F4?text=Junior+KG+Students+Learning",  
+      "image": "/gallery/IMG_5033.jpg",  
       "author": {
         "@type": "Organization",
         "name": "Kings Court World School"
@@ -53,243 +50,13 @@
     </script>
 
     <style>
-        :root {
-            /* Exact Google Logo Theme Colors - NO VARIATIONS */
-            --google-blue: #4285F4;
-            --google-red: #EA4335;
-            --google-yellow: #FBBC05;
-            --google-green: #34A853;
-            
-            /* Core Mapping */
-            --primary: var(--google-blue);
-            --secondary: var(--google-red);
-            --accent: var(--google-yellow);
-            
-            --dark: #202124;
-            --light: #F8F9FA;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Fredoka', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Bubblegum Sans', cursive;
-            letter-spacing: 1px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-
-        /* --- Top Bar --- */
-        .top-bar {
-            background-color: var(--primary);
-            color: white;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .top-bar a:hover { 
-            color: var(--accent); 
-        }
-
-        .top-bar-right.social-top { 
-            display: flex; 
-            gap: 15px; 
-        }
-
-        .top-bar-right.social-top a { 
-            font-size: 1.1rem; 
-        }
-
-        /* --- Navigation --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 5%;
-            background: rgba(255, 255, 255, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-
-        .logo { 
-            display: flex; 
-            align-items: center; 
-        }
-
-        .nav-links { 
-            display: flex; 
-            gap: 1.5rem; 
-            list-style: none; 
-            align-items: center; 
-        }
-
-        .nav-item { 
-            position: relative; 
-        }
-
-        .nav-item > a {
-            color: var(--dark); 
-            font-weight: 600; 
-            font-size: 1rem; 
-            padding: 10px 0; 
-            display: block;
-        }
-
-        .nav-item > a:hover { 
-            color: var(--google-red); 
-        }
-
-        .dropdown-menu {
-            display: none; 
-            position: absolute; 
-            top: 100%; 
-            left: 0; 
-            background: white;
-            min-width: 220px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-radius: 15px;
-            padding: 10px 0; 
-            z-index: 9999; 
-            border-top: 4px solid var(--google-green); 
-            list-style: none; 
-            margin: 0;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-item:hover .dropdown-menu { 
-            display: block; 
-            animation: fadeInUp 0.3s ease; 
-        }
-
-        .dropdown-menu li a { 
-            padding: 8px 20px; 
-            display: block; 
-            font-size: 0.9rem; 
-            color: #555; 
-        }
-
-        .dropdown-menu li a:hover { 
-            background: var(--light); 
-            color: var(--google-blue); 
-            padding-left: 25px; 
-        }
-
-        .cta-btn {
-            background-color: var(--primary); 
-            color: white !important; 
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px; 
-            font-weight: bold; 
-            box-shadow: 0 4px 0 rgba(0,0,0,0.2); 
-            display: inline-block;
-        }
-
-        .cta-btn:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 0 rgba(0,0,0,0.2); 
-        }
-
-        /* --- Sticky Sidebar --- */
-        #side-quick-links { 
-            position: fixed; 
-            right: 0; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            z-index: 999; 
-        }
-
-        #side-quick-links ul { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: flex-end; 
-            gap: 10px; 
-            list-style: none; 
-        }
-
-        #side-quick-links ul li {
-            background: var(--white); 
-            width: 50px; 
-            height: 50px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            box-shadow: -2px 5px 15px rgba(0,0,0,0.15); 
-            transition: all 0.3s;
-            border-top-left-radius: 25px; 
-            border-bottom-left-radius: 25px; 
-            overflow: hidden; 
-            cursor: pointer;
-        }
-
-        #side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
-        #side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
-        #side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
-        
-        #side-quick-links ul li a { 
-            display: flex; 
-            align-items: center; 
-            width: 100%; 
-            height: 100%; 
-            text-decoration: none; 
-        }
-
-        #side-quick-links ul li.call i { color: var(--google-blue); }
-        #side-quick-links ul li.marker i { color: var(--google-red); }
-        #side-quick-links ul li.whatapp i { color: var(--google-green); }
-        
-        #side-quick-links i { 
-            font-size: 1.2rem; 
-            min-width: 50px; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
-
-        #side-quick-links ul li:hover i { color: white; }
-        
-        #side-quick-links .content { 
-            white-space: nowrap; 
-            color: white; 
-            opacity: 0; 
-            transition: 0.3s; 
-        }
-
-        #side-quick-links ul li:hover .content { opacity: 1; }
+        /* --- Page Specific Styles (SEO) --- */
 
         /* --- Inner Banner --- */
         .inner-banner {
             position: relative; 
-            height: 35vh; 
-            min-height:350px; 
+            height: auto; 
+            min-height: 250px; 
             background-color: var(--google-blue);
             display: flex; 
             align-items: center; 
@@ -297,8 +64,8 @@
             text-align: center;
             color: white; 
             overflow: hidden; 
-            padding-top: 70px; 
-            padding-bottom: 80px;
+            padding-top: 40px; 
+            padding-bottom: 50px; 
         }
 
         .inner-banner-content {
@@ -306,7 +73,7 @@
             position: relative; 
             animation: popIn 1s ease-out; 
             margin-bottom: 40px; 
-            max-width: 800px; 
+            max-width: 900px; 
             padding: 0 20px;
         }
 
@@ -414,8 +181,8 @@
         .post-featured-image {
             width: 100%;
             height: 400px;
-            object-fit: cover;
-            background-color: #E8EAED;
+            object-fit: cover; 
+            
         }
 
         .post-content-wrapper {
@@ -475,7 +242,7 @@
             letter-spacing: 0.2px;
         }
 
-        .post-body ul, .post-body ol {
+        .post-body ul {
             margin: 0 0 1.8rem 2rem; 
             color: #444; 
             font-size: 1.15rem; 
@@ -486,7 +253,7 @@
             margin-bottom: 0.8rem; 
         }
 
-        .post-body ul li::marker { 
+        .post-body li::marker { 
             color: var(--google-green); 
             font-size: 1.2em; 
         }
@@ -511,14 +278,17 @@
             margin: 3rem 0;
             text-align: center;
         }
+        
         .school-highlight-box p, 
-        .school-highlight-box ul {
-            text-align: left;
+        .school-highlight-box ul,
+        .school-highlight-box li {
+            text-align: left !important;
         }
 
         .school-highlight-box h3 { 
             margin-top: 0; 
             font-size: 2rem; 
+            text-align: center;
         }
 
         /* Share Area */
@@ -678,213 +448,24 @@
             transform: translateX(5px); 
         }
 
-        /* --- Footer --- */
-        footer { 
-            background-color: #4285f4; 
-            color: white; 
-            padding: 4rem 5% 2rem 5%; 
-            position: relative; 
-            margin-top: 0; 
-        }
-
-        .footer-wave { 
-            position: absolute; 
-            top: -1px; 
-            left: 0; 
-            width: 100%; 
-            overflow: hidden; 
-            line-height: 0; 
-        }
-
-        .footer-wave svg { 
-            display: block; 
-            width: calc(100% + 1.3px); 
-            height: 80px; 
-        }
-
-        .footer-wave path { 
-            fill: var(--light); 
-        }
-
-        .footer-content { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: space-between; 
-            gap: 2rem; 
-        }
-
-        .footer-col { 
-            flex: 1; 
-            min-width: 250px; 
-        }
-
-        .footer-col h3 { 
-            color: var(--google-yellow); 
-            margin-bottom: 1.5rem; 
-        }
-
-        .footer-col ul { 
-            list-style: none; 
-        }
-
-        .footer-col li { 
-            margin-bottom: 0.8rem; 
-        }
-
-        .footer-col a { 
-            color: #ccc; 
-        }
-
-        .footer-col a:hover { 
-            color: var(--google-yellow); 
-        }
-        
-        .social-links a {
-            display: inline-flex; 
-            width: 35px; 
-            height: 35px; 
-            background: rgba(255, 255, 255, 0.2); 
-            color: white; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            margin-right: 10px; 
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover { 
-            background: white; 
-            color: var(--google-blue); 
-            transform: translateY(-3px); 
-        }
-
-        .copyright {
-            text-align: center; 
-            margin-top: 3rem; 
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2); 
-            font-size: 0.9rem; 
-            color: #ffffff; 
-            opacity: 0.9;
-        }
-
-        /* Mobile Menu */
-        .hamburger { 
-            display: none; 
-            font-size: 1.8rem; 
-            cursor: pointer; 
-            color: var(--google-blue); 
-            margin-left: auto; 
-            padding-right: 10px; 
-        }
-
-        /* --- RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 992px) {
             .logo { max-width: 75%; } 
             .logo img { max-width: 100%; height: auto !important; }
-            .hamburger { display: block; margin-left: auto; padding-left: 15px; padding-right: 0; }
-            
-            .nav-links {
-                display: none; 
-                flex-direction: column; 
-                position: absolute;
-                top: 100%; 
-                left: 0; 
-                width: 100%; 
-                background: white; 
-                padding: 1rem 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active { display: flex; }
-            
-            .dropdown-menu { 
-                position: static; 
-                box-shadow: none; 
-                padding-left: 20px; 
-                border-top: none; 
-                background: #f9f9f9; 
-            }
-            
-            .top-bar { justify-content: space-between; padding: 10px 5%; }
-            .top-bar-right { display: none; }
         }
 
         @media (max-width: 768px) {
-            .section, footer { padding: 3rem 5%; }
+            .section { padding: 3rem 5%; }
             .inner-banner h1 { font-size: 2.2rem; }
             .blog-single-container { margin-top: -40px; }
             .post-content-wrapper { padding: 2rem; }
             .post-body h2 { font-size: 2rem; }
             .post-body p, .post-body ul { font-size: 1.05rem; }
-            #side-quick-links { display: none; }
             .school-highlight-box { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <div id="side-quick-links">
-        <ul>
-            <li class="call">
-                <a href="tel:+917665083556">
-                    <i class="fa fa-phone"></i>
-                    <div class="content">+91-76650 83556</div>
-                </a>
-            </li>
-            <li class="marker">
-                <a href="enquiry.html">
-                    <i class="fa fa-file-lines"></i>
-                    <div class="content">Apply Now</div>
-                </a>
-            </li>
-            <li class="whatapp">
-                <a href="https://wa.me/917665083556" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <div class="content">WhatsApp</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <a href="tel:+917665083556"><i class="fa fa-phone"></i> +91-76650 83556</a>
-        </div>
-        <div class="top-bar-right social-top">
-            <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-
-    <nav>
-        <div class="logo">
-            <a href="/">
-                <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-            </a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="about.html">About us</a></li>
-            <li class="nav-item">
-                <a href="javascript:void(0)">Programs <i class="fa fa-angle-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="playgroup_jal.html">Playgroup – Jal</a></li>
-                    <li><a href="nursery_agni.html">Nursery – Agni</a></li>
-                    <li><a href="junior_kg_vayu.html">Junior KG – Vayu</a></li>
-                    <li><a href="senior_kg_akash.html">Senior KG – Akash</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="enquiry.html">Admissions</a></li>
-            <li class="nav-item"><a href="gallery.php">Gallery</a></li>
-            <li class="nav-item"><a href="blog.html">Blogs</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
-            <li><a href="enquiry.html" class="cta-btn">Apply Online</a></li>
-        </ul>
-    </nav>
+    <div id="header-root"></div>
 
     <section class="inner-banner">
         <div class="cloud one"></div>
@@ -892,7 +473,7 @@
         
         <div class="inner-banner-content">
             <h1>Finding the Best Junior KG (LKG) School Near Vandemataram Circle</h1>
-            <p>A comprehensive guide on what makes Kings Court World School the best choice for Junior KG and LKG admissions in Mansarovar.</p>
+            <p>Empowering children through the inquiry-based 'Vayu' program for a confident future.</p>
         </div>
 
         <div class="wave-container">
@@ -905,167 +486,65 @@
     <section class="section">
         <div class="blog-single-container">
             
-            <img src="https://kingscourtworldschool.com/gallery/IMG_0804.jpg" alt="Best Junior KG School near Vandemataram Circle Mansarovar Jaipur" class="post-featured-image">
+            <img src="gallery/IMG_5033.jpg" alt="Junior KG Students Learning" class="post-featured-image">
 
             <div class="post-content-wrapper">
                 
                 <div class="post-meta-header">
-                    <span class="post-tag">Admissions Guide</span>
-                    <span><i class="far fa-calendar-alt"></i> March 23, 2026</span>
-                    <span><i class="far fa-user"></i> Admissions Team</span>
-                    <span><i class="far fa-clock"></i> 6 Min Read</span>
+                    <span class="post-tag">Education Guide</span>
+
+                    <span><i class="far fa-user"></i> Admin / Academics Team</span>
+                    <span><i class="far fa-clock"></i> 5 Min Read</span>
                 </div>
 
                 <div class="post-body">
-                    <p>The leap from Nursery to Junior Kindergarten—often referred to as Lower Kindergarten or LKG—is one of the most significant milestones in a child's early educational journey. This is the stage where pure play beautifully merges with structured learning. If you are a parent searching for the <strong>best Junior KG school near Vandemataram Circle</strong> in Mansarovar, Jaipur, you are likely navigating through numerous brochures, campus visits, and educational methodologies, wondering which environment will truly nurture your child's unique potential.</p>
+                    <h2>The Junior KG (LKG) Milestone: More Than Just Play</h2>
+                    <p>Junior Kindergarten (often called LKG or Lower Kindergarten) is one of the most critical years in a child's development. It is the bridge between the free-flowing play of nursery and the more structured academic environment of Senior KG and Primary school. For parents searching for the best Junior KG (LKG) school near Vandemataram Circle, the priority is finding an environment that nurtures curiosity while building foundational skills.</p>
+                    <p>At Kings Court World School, our Junior KG program, named <strong>'Vayu'</strong> (representing movement and exploration), is designed to give children the "wings" to explore their world with confidence and logic.</p>
 
-                    <p>At Kings Court World School (KCWS), we understand this anxiety perfectly. You are not just looking for a day-care facility; you are looking for an environment that acts as a secure, stimulating second home. You want a place that fosters independence, ignites intellectual curiosity, and builds the socio-emotional foundation your child needs to thrive in formal schooling and beyond.</p>
+                    <h3>1. Inquiry-Based Learning: The 'Why' Behind the 'What'</h3>
+                    <p>Most schools focus on what to learn. As the top LKG school in Mansarovar, we focus on <em>how</em> to learn. Our inquiry-based framework encourages children to ask questions. Instead of just showing them a picture of a leaf, we take them to our garden, let them touch different textures, and discuss why leaves change color. This Reggio Emilia-inspired approach ensures that knowledge is discovered, not just delivered.</p>
 
-                    <h2>Why is the Junior KG (LKG) Transition So Crucial?</h2>
-                    <p>Between the ages of 3.5 and 5 years, a child’s brain undergoes a massive developmental shift. In Nursery, children primarily engage in "parallel play"—playing alongside other children but often independently. By the time they enter Junior KG, they begin transitioning into "cooperative play." They start forming real friendships, negotiating roles in games, and understanding complex social dynamics.</p>
-
-                    <p>Academically, this is the golden window for language acquisition and logical reasoning. Their vocabulary explodes, and they begin to grasp abstract concepts like numbers representing quantities, and letters making specific sounds. Therefore, finding a <strong>top LKG school in Mansarovar</strong> that understands how to harness this rapid brain development without overwhelming the child with rote memorization is critical to their long-term love for learning.</p>
-
-                    <blockquote>
-                        "In Junior KG, we don't just teach children to count; we teach them what numbers mean in the real world. We don't just teach the alphabet; we teach them the power of expression."
-                    </blockquote>
-
-                    <h2>The 'Vayu' Program: Redefining LKG at Kings Court World School</h2>
-                    <p>At KCWS, our Junior KG program is thoughtfully named <strong>Vayu</strong>, symbolizing the breath of independent thinking, fluidity, and life. We recognize that 4-year-olds are bursting with energy and questions. Instead of confining them to desks and demanding silence, the Vayu program channels their energy into purposeful, inquiry-based exploration.</p>
-
-                    <p>If you have been looking for a <strong>Reggio Emilia Junior KG in Jaipur</strong>, you will be delighted to know that our curriculum is a rich tapestry woven from Reggio-inspired experiential learning, Montessori principles for structured independence, and the globally acclaimed Finnish approach to child well-being.</p>
-
-                    <h3>1. Language, Literacy, and Phonics</h3>
-                    <p>In the Vayu program, language is not taught through endless writing drills. Instead, we use structured phonics programs that make reading an exciting puzzle. Children learn to identify letters by their sounds using Montessori sandpaper letters, allowing them to feel the shape of the letter while vocalizing it. We engage them in storytelling, picture reading, and role-play, ensuring that by the end of Junior KG, they possess strong reading readiness and the confidence to communicate their thoughts clearly.</p>
-
-                    <h3>2. Numeracy and Logical Thinking</h3>
-                    <p>Math in early childhood should never be intimidating. At our campus, centrally located for parents seeking an <strong>affordable LKG school in Jaipur</strong>, we teach numeracy through hands-on manipulatives. Children sort buttons, count blocks, and measure water in sensory bins. They begin to understand patterns, shapes, and spatial awareness naturally. This concrete understanding of mathematics forms an unbreakable foundation for complex problem-solving later in life.</p>
-
-                    <h3>3. Social and Emotional Intelligence</h3>
-                    <p>Academic brilliance means very little without emotional resilience. Junior KG is the prime time to teach children how to regulate their emotions. Through targeted group activities, we teach empathy, sharing, and conflict resolution. When a disagreement happens over a toy, our educators do not just intervene and dictate a solution; they guide the children to articulate their feelings and negotiate a fair outcome together.</p>
-
-                    <div class="school-highlight-box">
-                        <h3>Why Proximity Matters: Best Preschool Near Vandemataram Circle</h3>
-                        <p>When selecting a preschool, location is more than just a matter of convenience; it is a matter of your child's physical and mental well-being. Lengthy commutes in heavy city traffic can drain a young child's energy before they even reach the classroom. By choosing a locally accessible institution like KCWS, you ensure:</p>
-                        <ul>
-                            <li><strong>Fresh Starts:</strong> Your child arrives at school refreshed, eager, and ready to absorb the day's lessons.</li>
-                            <li><strong>Strong Partnerships:</strong> Parents can easily attend morning assemblies, participate in workshops, and quickly reach the campus.</li>
-                            <li><strong>Community Trust:</strong> We are deliberately positioned right off Vandemataram Circle to be the neighborhood's safest and most trusted educational hub.</li>
-                        </ul>
-                        <a href="enquiry.html" class="cta-btn" style="margin-top: 15px;">Book a Campus Tour</a>
-                    </div>
-
-                    <h2>World-Class Infrastructure Built for Four-Year-Olds</h2>
-                    <p>Many traditional schools force young children to adapt to environments built for older students. At KCWS, every square inch of our facility is scaled and designed specifically for early childhood education.</p>
-
-                    <p>Parents touring our campus for <strong>LKG admission 2026 in Mansarovar Jaipur</strong> are consistently amazed by our infrastructure. We proudly offer:</p>
+                    <h3>2. Foundational Literacy and Numeracy (FLN)</h3>
+                    <p>In alignment with NEP 2020, we prioritize FLN. By the end of Junior KG, our students are comfortable with:</p>
                     <ul>
-                        <li><strong>AC Classrooms with Natural Light:</strong> Ensuring a comfortable, well-ventilated space that keeps children alert and focused regardless of the weather outside.</li>
-                        <li><strong>The Space Lab:</strong> Even 4-year-olds are fascinated by stars and planets. Our dedicated Space Lab introduces them to the wonders of the universe through age-appropriate, interactive displays.</li>
-                        <li><strong>Safe Outdoor & Indoor Sports Zones:</strong> Gross motor skill development is vital in Junior KG. Our students have access to safe skating zones, an archery field, indoor soccer, and a dedicated adventure sports area.</li>
-                        <li><strong>Child-Led Exploration Corners:</strong> Inside the classrooms, you will find dedicated corners for art, dramatic play, and building blocks, allowing children to choose activities that spark their individual interests.</li>
+                        <li><strong>Phonetic Awareness:</strong> Identifying sounds and beginning to blend them.</li>
+                        <li><strong>Number Sense:</strong> Understanding quantities and patterns, not just counting numbers.</li>
+                        <li><strong>Logico-Visual Skills:</strong> Solving age-appropriate puzzles and identifying spatial relationships.</li>
                     </ul>
 
-                    <h2>A Day in the Life of a Junior KG Student at KCWS</h2>
-                    <p>Structure provides young children with a sense of security, while flexibility allows for creativity. A typical day in our Vayu program represents a perfect balance of both.</p>
+                    <h3>3. Social and Emotional Development</h3>
+                    <p>Junior KG is where children start forming complex friendships. Our 'Vayu' program emphasizes empathy, turn-taking, and conflict resolution. Being the best preschool near Vandemataram Circle means we provide a safe sanctuary where children can express their emotions freely and learn to navigate social dynamics with the guidance of compassionate mentors.</p>
 
-                    <p>The day begins with a 'Morning Circle,' a community-building time where children greet each other, discuss the weather, and preview the day's activities. This is followed by a period of uninterrupted 'Free Flow' play, where children choose their learning stations. Mid-morning features a structured literacy or numeracy block using hands-on materials, followed by a nutritious snack time where table manners and independent eating are gently encouraged.</p>
+                    <div class="school-highlight-box">
+                        <h3>Why Choose Kings Court World School for LKG?</h3>
+                        <p>We invite families from Vandemataram Circle, Golyawas, and across Mansarovar to visit our campus. We don't just offer LKG admission 2026; we offer a partnership in parenting. Our small class sizes ensure that your child is never just a face in the crowd.</p>
+                        <ul>
+                            <li><strong>Expert Educators:</strong> Teachers trained in Montessori and Reggio Emilia methods.</li>
+                            <li><strong>Holistic Balance:</strong> 50% structured learning, 50% exploratory play.</li>
+                            <li><strong>Modern Infrastructure:</strong> Technology-integrated smart classes for visual learners.</li>
+                        </ul>
+                        <a href="junior_kg_vayu.html" class="cta-btn" style="margin-top: 15px;">Explore the Vayu Program</a>
+                    </div>
 
-                    <p>The afternoon is reserved for gross motor activities in our sports arenas or creative expression in our art zones, culminating in a reflective storytime before they joyfully head home to you.</p>
+                    <h3>4. Preparing for the Future: Senior KG and Beyond</h3>
+                    <p>Our curriculum is vertically aligned. This means that everything a child learns in Junior KG at Kings Court is a direct building block for Senior KG. This seamless transition reduces "academic stress" and ensures that the child remains a lifelong learner.</p>
 
-                    <h2>How to Secure LKG Admission 2026 at Kings Court World School</h2>
-                    <p>If you are ready to give your child a joyful, inquiry-based foundation, navigating the admissions process at KCWS is designed to be as stress-free and welcoming as our classrooms.</p>
-
-                    <ol>
-                        <li><strong>Inquiry:</strong> Reach out to us via our website, WhatsApp, or a simple phone call. Our admissions counselors are ready to answer all your questions.</li>
-                        <li><strong>Campus Visit:</strong> We highly recommend scheduling a campus tour to see our Reggio-inspired classrooms and expansive sports facilities in person.</li>
-                        <li><strong>Application Submission:</strong> Easily fill out our admission form online or submit a physical copy at our front desk.</li>
-                        <li><strong>Friendly Interaction:</strong> We do not conduct stressful interviews. Instead, we host a brief, comfortable interaction to understand your child's basic readiness.</li>
-                    </ol>
-
-                    <h2>Conclusion: Make the Right Choice for Your Child's Future</h2>
-                    <p>Selecting the right Junior KG school is a foundational decision that echoes throughout a child's entire academic career. By prioritizing a holistic, inquiry-based curriculum set within a world-class infrastructure, Kings Court World School stands out as the premier choice for families in Jaipur.</p>
-
-                    <p>Do not let your child settle for rote memorization when they could be thriving in an environment of joyful discovery. Join the community of forward-thinking parents who have made us the <strong>best Junior KG school near Vandemataram Circle</strong>.</p>
-                </div>
-
-                <div class="post-share">
-                    <h4>Share this article:</h4>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://kingscourtworldschool.com/best_junior_kg_lkg_school.html" target="_blank" class="share-btn share-fb"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/intent/tweet?url=https://kingscourtworldschool.com/best_junior_kg_lkg_school.html&text=Finding%20the%20Best%20Junior%20KG%20School%20Near%20Vandemataram%20Circle" target="_blank" class="share-btn share-tw"><i class="fab fa-twitter"></i></a>
-                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20guide%20to%20the%20best%20LKG%20school%20in%20Mansarovar!%20https://kingscourtworldschool.com/best_junior_kg_lkg_school.html" target="_blank" class="share-btn share-wa"><i class="fab fa-whatsapp"></i></a>
+                    <h2>Conclusion</h2>
+                    <p>Your search for the best Junior KG (LKG) school near Vandemataram Circle Jaipur ends here. At Kings Court World School, we are committed to turning the curiosity of today into the brilliance of tomorrow. We invite you to be a part of our vibrant learning community.</p>
+                    
+                    <p><strong>Contact us for Admissions today!</strong><br>
+                    Address: Plot no.- 5, Kings lane, Golyawas, Mansarovar, Jaipur<br>
+                    Phone: +91-76650 83556</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <a href="index.html">
-                        <img src="/Footerlogo.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="tel:+917665083556"><i class="fa fa-phone"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="enquiry.html">Enroll Now</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Prospectus</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Plot no.- 5, Kings lane, Suraj Vatika, Golyawas, Vandemataram Circle, Mansarovar, Jaipur -302020</li>
-                    <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-76650 83556</li>
-                    <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> kingscourtworldschool@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>Copyright © 2026 Kings Court World School</p>
-        </div>
-    </footer>
+    <div id="footer-root"></div>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Toggle dropdown on mobile click
-        const dropdownToggles = document.querySelectorAll('.nav-item > a');
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                if(window.innerWidth <= 992) {
-                    const dropdown = this.nextElementSibling;
-                    if(dropdown && dropdown.classList.contains('dropdown-menu')) {
-                        e.preventDefault();
-                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
 </body>
 </html>

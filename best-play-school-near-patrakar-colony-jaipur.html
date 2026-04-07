@@ -4,261 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
     <title>Best Play School near Patrakar Colony Jaipur | Kings Court World School</title>
     <meta name="description" content="Looking for the best play school near Patrakar Colony Jaipur? See how Kings Court World School uses vibrant events and cultural celebrations to build child confidence.">
     <meta name="keywords" content="best play school near Patrakar Colony Jaipur, top preschool Patrakar Colony, Kings Court World School events, kindergarten near Mansarovar Patrakar Colony, experiential learning Jaipur.">
     <meta name="author" content="Kings Court World School">
     <meta name="robots" content="index, follow">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favKCWS.png">
     <link rel="apple-touch-icon" href="/favKCWS.png">
 
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <style>
-        :root {
-            /* Exact Google Logo Theme Colors - NO VARIATIONS */
-            --google-blue: #4285F4;
-            --google-red: #EA4335;
-            --google-yellow: #FBBC05;
-            --google-green: #34A853;
-            
-            /* Core Mapping */
-            --primary: var(--google-blue);
-            --secondary: var(--google-red);
-            --accent: var(--google-yellow);
-            
-            --dark: #202124;
-            --light: #F8F9FA;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Fredoka', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Bubblegum Sans', cursive;
-            letter-spacing: 1px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-
-        /* --- Top Bar --- */
-        .top-bar {
-            background-color: var(--primary);
-            color: white;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .top-bar a:hover { 
-            color: var(--accent); 
-        }
-
-        .top-bar-right.social-top { 
-            display: flex; 
-            gap: 15px; 
-        }
-
-        .top-bar-right.social-top a { 
-            font-size: 1.1rem; 
-        }
-
-        /* --- Navigation --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 5%;
-            background: rgba(255, 255, 255, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-
-        .logo { 
-            display: flex; 
-            align-items: center; 
-        }
-
-        .nav-links { 
-            display: flex; 
-            gap: 1.5rem; 
-            list-style: none; 
-            align-items: center; 
-        }
-
-        .nav-item { 
-            position: relative; 
-        }
-
-        .nav-item > a {
-            color: var(--dark); 
-            font-weight: 600; 
-            font-size: 1rem; 
-            padding: 10px 0; 
-            display: block;
-        }
-
-        .nav-item > a:hover { 
-            color: var(--google-red); 
-        }
-
-        .dropdown-menu {
-            display: none; 
-            position: absolute; 
-            top: 100%; 
-            left: 0; 
-            background: white;
-            min-width: 220px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-radius: 15px;
-            padding: 10px 0; 
-            z-index: 9999; 
-            border-top: 4px solid var(--google-green); 
-            list-style: none; 
-            margin: 0;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-item:hover .dropdown-menu { 
-            display: block; 
-            animation: fadeInUp 0.3s ease; 
-        }
-
-        .dropdown-menu li a { 
-            padding: 8px 20px; 
-            display: block; 
-            font-size: 0.9rem; 
-            color: #555; 
-        }
-
-        .dropdown-menu li a:hover { 
-            background: var(--light); 
-            color: var(--google-blue); 
-            padding-left: 25px; 
-        }
-
-        .cta-btn {
-            background-color: var(--primary); 
-            color: white !important; 
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px; 
-            font-weight: bold; 
-            box-shadow: 0 4px 0 rgba(0,0,0,0.2); 
-            display: inline-block;
-        }
-
-        .cta-btn:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 0 rgba(0,0,0,0.2); 
-        }
-
-        /* --- Sticky Sidebar --- */
-        #side-quick-links { 
-            position: fixed; 
-            right: 0; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            z-index: 999; 
-        }
-
-        #side-quick-links ul { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: flex-end; 
-            gap: 10px; 
-            list-style: none; 
-        }
-
-        #side-quick-links ul li {
-            background: var(--white); 
-            width: 50px; 
-            height: 50px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            box-shadow: -2px 5px 15px rgba(0,0,0,0.15); 
-            transition: all 0.3s;
-            border-top-left-radius: 25px; 
-            border-bottom-left-radius: 25px; 
-            overflow: hidden; 
-            cursor: pointer;
-        }
-
-        #side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
-        #side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
-        #side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
-        
-        #side-quick-links ul li a { 
-            display: flex; 
-            align-items: center; 
-            width: 100%; 
-            height: 100%; 
-            text-decoration: none; 
-        }
-
-        #side-quick-links ul li.call i { color: var(--google-blue); }
-        #side-quick-links ul li.marker i { color: var(--google-red); }
-        #side-quick-links ul li.whatapp i { color: var(--google-green); }
-        
-        #side-quick-links i { 
-            font-size: 1.2rem; 
-            min-width: 50px; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
-
-        #side-quick-links ul li:hover i { color: white; }
-        
-        #side-quick-links .content { 
-            white-space: nowrap; 
-            color: white; 
-            opacity: 0; 
-            transition: 0.3s; 
-        }
-
-        #side-quick-links ul li:hover .content { opacity: 1; }
+        /* --- Page Specific Styles (SEO) --- */
 
         /* --- Inner Banner --- */
         .inner-banner {
             position: relative; 
-            height: 35vh; 
-            min-height: 280px; 
+            height: auto; 
+            min-height: 250px; 
             background-color: var(--google-blue);
             display: flex; 
             align-items: center; 
@@ -267,7 +31,7 @@
             color: white; 
             overflow: hidden; 
             padding-top: 40px; 
-            padding-bottom: 70px;
+            padding-bottom: 50px; 
         }
 
         .inner-banner-content {
@@ -275,7 +39,7 @@
             position: relative; 
             animation: popIn 1s ease-out; 
             margin-bottom: 40px; 
-            max-width: 800px; 
+            max-width: 900px; 
             padding: 0 20px;
         }
 
@@ -367,14 +131,14 @@
         }
         
         .blog-single-container {
-            max-width: 1050px; /* Increased to cover the page well */
-            width: 95%; /* Make sure it scales on smaller screens */
+            max-width: 1050px; 
+            width: 95%; 
             margin: 0 auto;
             background: white;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             overflow: hidden;
-            margin-top: -80px; /* Pull up over the banner */
+            margin-top: -80px; 
             position: relative;
             z-index: 20;
             border-top: 6px solid var(--google-green);
@@ -383,12 +147,12 @@
         .post-featured-image {
             width: 100%;
             height: 400px;
-            object-fit: cover;
-            background-color: #E8EAED;
+            object-fit: cover; 
+            
         }
 
         .post-content-wrapper {
-            padding: 4rem 6rem; /* Increased padding for spacious feel */
+            padding: 4rem 6rem; 
         }
 
         .post-meta-header {
@@ -431,16 +195,16 @@
         }
 
         .post-body h3 {
-            font-size: 1.8rem; /* Adjusted for better visibility */
+            font-size: 1.8rem; 
             color: var(--google-blue); 
             margin: 2.5rem 0 1.2rem 0;
         }
 
         .post-body p {
-            font-size: 1.15rem; /* Slightly larger */
+            font-size: 1.15rem; 
             color: #444; 
-            margin-bottom: 1.8rem; /* Better spacing between paragraphs */
-            line-height: 1.9; /* Improved line height */
+            margin-bottom: 1.8rem; 
+            line-height: 1.9; 
             letter-spacing: 0.2px;
         }
 
@@ -473,17 +237,24 @@
 
         /* Highlight Box specifically for School mention */
         .school-highlight-box {
-            background: rgba(66, 133, 244, 0.08); /* Light Google Blue */
+            background: rgba(66, 133, 244, 0.08); 
             border: 2px solid var(--google-blue);
             padding: 2.5rem;
             border-radius: 15px;
             margin: 3rem 0;
             text-align: center;
         }
+        
+        .school-highlight-box p, 
+        .school-highlight-box ul,
+        .school-highlight-box li {
+            text-align: left !important;
+        }
 
         .school-highlight-box h3 { 
             margin-top: 0; 
             font-size: 2rem; 
+            text-align: center;
         }
 
         /* Share Area */
@@ -525,7 +296,7 @@
             box-shadow: 0 5px 10px rgba(0,0,0,0.2); 
         }
 
-        /* --- Related Posts Grid (Reusing Original CSS) --- */
+        /* --- Related Posts Grid --- */
         .related-posts-section { 
             max-width: 1200px; 
             margin: 4rem auto 0 auto; 
@@ -643,225 +414,32 @@
             transform: translateX(5px); 
         }
 
-        /* --- Footer --- */
-        footer { 
-            background-color: #4285f4; 
-            color: white; 
-            padding: 4rem 5% 2rem 5%; 
-            position: relative; 
-            margin-top: 0; 
-        }
-
-        .footer-wave { 
-            position: absolute; 
-            top: -1px; 
-            left: 0; 
-            width: 100%; 
-            overflow: hidden; 
-            line-height: 0; 
-        }
-
-        .footer-wave svg { 
-            display: block; 
-            width: calc(100% + 1.3px); 
-            height: 80px; 
-        }
-
-        .footer-wave path { 
-            fill: var(--light); 
-        }
-
-        .footer-content { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: space-between; 
-            gap: 2rem; 
-        }
-
-        .footer-col { 
-            flex: 1; 
-            min-width: 250px; 
-        }
-
-        .footer-col h3 { 
-            color: var(--google-yellow); 
-            margin-bottom: 1.5rem; 
-        }
-
-        .footer-col ul { 
-            list-style: none; 
-        }
-
-        .footer-col li { 
-            margin-bottom: 0.8rem; 
-        }
-
-        .footer-col a { 
-            color: #ccc; 
-        }
-
-        .footer-col a:hover { 
-            color: var(--google-yellow); 
-        }
-        
-        .social-links a {
-            display: inline-flex; 
-            width: 35px; 
-            height: 35px; 
-            background: rgba(255, 255, 255, 0.2); 
-            color: white; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            margin-right: 10px; 
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover { 
-            background: white; 
-            color: var(--google-blue); 
-            transform: translateY(-3px); 
-        }
-
-        .copyright {
-            text-align: center; 
-            margin-top: 3rem; 
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2); 
-            font-size: 0.9rem; 
-            color: #ffffff; 
-            opacity: 0.9;
-        }
-
-        /* Mobile Menu */
-        .hamburger { 
-            display: none; 
-            font-size: 1.8rem; 
-            cursor: pointer; 
-            color: var(--google-blue); 
-            margin-left: auto; 
-            padding-right: 10px; 
-        }
-
-        /* --- RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 992px) {
             .logo { max-width: 75%; } 
             .logo img { max-width: 100%; height: auto !important; }
-            .hamburger { display: block; margin-left: auto; padding-left: 15px; padding-right: 0; }
-            
-            .nav-links {
-                display: none; 
-                flex-direction: column; 
-                position: absolute;
-                top: 100%; 
-                left: 0; 
-                width: 100%; 
-                background: white; 
-                padding: 1rem 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active { display: flex; }
-            
-            .dropdown-menu { 
-                position: static; 
-                box-shadow: none; 
-                padding-left: 20px; 
-                border-top: none; 
-                background: #f9f9f9; 
-            }
-            
-            .top-bar { justify-content: space-between; padding: 10px 5%; }
-            .top-bar-right { display: none; }
         }
 
         @media (max-width: 768px) {
-            .section, footer { padding: 3rem 5%; }
+            .section { padding: 3rem 5%; }
             .inner-banner h1 { font-size: 2.2rem; }
             .blog-single-container { margin-top: -40px; }
             .post-content-wrapper { padding: 2rem; }
             .post-body h2 { font-size: 2rem; }
             .post-body p, .post-body ul { font-size: 1.05rem; }
-            #side-quick-links { display: none; }
             .school-highlight-box { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Floating Quick Links Sidebar -->
-    <div id="side-quick-links">
-        <ul>
-            <li class="call">
-                <a href="tel:+917665083556">
-                    <i class="fa fa-phone"></i>
-                    <div class="content">+91-76650 83556</div>
-                </a>
-            </li>
-            <li class="marker">
-                <a href="enquiry.html">
-                    <i class="fa fa-file-lines"></i>
-                    <div class="content">Apply Now</div>
-                </a>
-            </li>
-            <li class="whatapp">
-                <a href="https://wa.me/917665083556" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <div class="content">WhatsApp</div>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <div id="header-root"></div>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <a href="tel:+917665083556"><i class="fa fa-phone"></i> +91-76650 83556</a>
-        </div>
-        <div class="top-bar-right social-top">
-            <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">
-            <a href="/">
-                <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-            </a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="about.html">About us</a></li>
-            <li class="nav-item">
-                <a href="javascript:void(0)">Programs <i class="fa fa-angle-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="playgroup_jal.html">Playgroup – Jal</a></li>
-                    <li><a href="nursery_agni.html">Nursery – Agni</a></li>
-                    <li><a href="junior_kg_vayu.html">Junior KG – Vayu</a></li>
-                    <li><a href="senior_kg_akash.html">Senior KG – Akash</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="enquiry.html">Admissions</a></li>
-            <li class="nav-item"><a href="gallery.php">Gallery</a></li>
-            <li class="nav-item"><a href="blog.html">Blogs</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
-            <li><a href="enquiry.html" class="cta-btn">Apply Online</a></li>
-        </ul>
-    </nav>
-
-    <!-- Inner Banner -->
     <section class="inner-banner">
         <div class="cloud one"></div>
         <div class="cloud two"></div>
         
         <div class="inner-banner-content">
-            <h1>Why We Are the Best Play School near Patrakar Colony Jaipur</h1>
-            <p>Beyond the classroom—how celebrations and cultural events shape confident, social, and happy learners.</p>
+            <h1>Best Play School near Patrakar Colony Jaipur</h1>
+            <p>Where every event is a milestone and every child is a star in our journey of discovery.</p>
         </div>
 
         <div class="wave-container">
@@ -871,129 +449,63 @@
         </div>
     </section>
 
-    <!-- Blog Content Section -->
     <section class="section">
         <div class="blog-single-container">
             
-            <!-- Featured Image -->
-            <img src="gallery/11ddb360-4789-4c0a-a9b1-9baccf2ceb7a.jpg" alt="" class="post-featured-image">
+            <img src="gallery/664ea7a3-e720-422a-ba72-68c295ac1378.jpg" alt="Best Play School near Patrakar Colony Jaipur" class="post-featured-image">
 
             <div class="post-content-wrapper">
                 
-                <!-- Post Meta Data -->
                 <div class="post-meta-header">
-                    <span class="post-tag">Events & Celebrations</span>
-                    <span><i class="far fa-calendar-alt"></i> March 14, 2026</span>
-                    <span><i class="far fa-user"></i> Admin / Academics Team</span>
+                    <span class="post-tag">School Life</span>
+
+                    <span><i class="far fa-user"></i> Admin / Events Team</span>
                     <span><i class="far fa-clock"></i> 4 Min Read</span>
                 </div>
 
-                <!-- Post Body text -->
                 <div class="post-body">
-                    <p>Early childhood is a whirlwind of "firsts"—the first time a child makes a friend, the first time they perform on stage, and the first time they understand a tradition. While textbooks provide the "what," school events provide the "how" and the "why." For parents searching for the best play school near Patrakar Colony Jaipur, the quality of a school's event calendar is often just as important as its academic curriculum. At this age, a festival is not just a holiday; it is a massive learning opportunity.</p>
+                    <h2>Wait, is school supposed to be this much fun?</h2>
+                    <p>When you look for the best play school near Patrakar Colony Jaipur, you're likely looking for more than just a place where your child learns their ABCs. You're looking for a second home—a place where they feel safe enough to experiment, bold enough to perform, and happy enough to thrive. At Kings Court World School, our philosophy is simple: a happy child is a learning child.</p>
+                    <p>While we take our academics very seriously, we take our "joy" even more seriously. We believe that school events and cultural celebrations are not just "extras"—they are essential tools for building a child’s confidence and social intelligence.</p>
 
-                    <h2>The Magic of Experiential Learning Through Events</h2>
-                    <p>Events are the heartbeat of a vibrant preschool. They take the lessons learned in the classroom and bring them to life in the real world. Here is why event-based learning is essential for your child's growth.</p>
+                    <h3>1. Why Events Matter in Early Childhood</h3>
+                    <p>A child's world is sensory. They learn through touch, sound, and movement. By organizing year-round events, from Grandparents' Day to Annual Sports Meets, we provide various stages for children to find their voice. For a toddler, standing on a stage and saying two lines is as significant as a professional giving a TED talk. It builds a foundation of "I can do this" that lasts forever.</p>
 
-                    <h3>1. Social Integration and Teamwork</h3>
-                    <p>When children participate in a group dance for a cultural fest or collaborate on a massive art project for "Grandparents' Day," they are practicing the art of teamwork. They learn to coordinate their movements with others, wait for their turn, and cheer for their classmates. These events break down social barriers and help even the most shy children find their voice.</p>
+                    <h3>2. Cultural Celebrations: Roots and Wings</h3>
+                    <p>As the best play school near Patrakar Colony Jaipur, we celebrate the diversity of India. Whether it is Janmashtami, Eid, Christmas, or Holi, the campus transforms into a vibrant canvas of learning. Children don't just read about these festivals in books; they live them. They learn about empathy, sharing, and the beauty of different traditions through firsthand experience.</p>
 
-                    <h3>2. Cultural Awareness and Roots</h3>
-                    <p>In a diverse world, understanding our heritage is vital. By celebrating festivals like Holi, Diwali, and Janmashtami, or observing national days, children develop a sense of identity and respect for various traditions. It turns abstract history into a colorful, sensory experience involving music, traditional attire, and storytelling.</p>
-
-                    <h3>3. Boosting Self-Confidence</h3>
-                    <p>Standing on a stage, even for a few seconds, is a milestone. Event-based activities encourage children to step out of their comfort zones. Whether it’s a "Fancy Dress" competition or a small skit, these moments build a foundation of public speaking and self-assurance that stays with them through adulthood.</p>
-
-                    <h3>4. Sensory and Creative Development</h3>
-                    <p>As seen in our vibrant gallery, events at our school often involve hands-on creativity. From messy finger painting on large canvases to dressing up in elaborate costumes, these activities stimulate a child's imagination and fine motor skills in a way that standard desk work cannot match.</p>
+                    <h3>3. Experiential Learning Beyond the Classroom</h3>
+                    <p>Our "Theme Days"—like Color Day, Farm Animal Day, or Professional Day—turn abstract concepts into tangible reality. When a child dresses up as a doctor or a gardener, they are engaging in role-play that develops their cognitive mapping of the world around them. This is the hallmark of the best preschool Patrakar Colony experience.</p>
 
                     <div class="school-highlight-box">
-                        <h3>Celebration and Joy at Kings Court World School</h3>
-                        <p>If you are looking for the best play school near Patrakar Colony Jaipur, Kings Court World School stands out for its commitment to holistic, joy-filled education. We believe that a happy child is a learning child.</p>
-                        <p>Our school is a hub of activity where we transition seamlessly from structured learning to festive celebrations. We ensure that our students—from Playgroup (Jal) to Senior KG (Akash)—are always at the center of the action. Whether it is an outdoor "Color Day" or a traditional cultural performance, our events are designed to foster a scientific temperament and a deep social consciousness. Our educators act as facilitators, ensuring every child feels safe to explore their talents and express their unique personalities.</p>
-                        <a href="enquiry.html" class="cta-btn" style="margin-top: 15px;">Explore Our Programs</a>
+                        <h3>What Makes Kings Court World School Unique?</h3>
+                        <p>We invite you to witness the energy of our campus firsthand. Residents of Patrakar Colony, Golyawas, and Mansarovar choose us because we treat every child as an individual. Our events are designed so that every student gets a chance to participate, regardless of their personality type.</p>
+                        <ul>
+                            <li><strong>Inclusivity:</strong> Every child is a participant, not just a spectator.</li>
+                            <li><strong>Parental Involvement:</strong> We believe parents are our partners in every celebration.</li>
+                            <li><strong>Safe Environment:</strong> Our campus in Golyawas is a sanctuary for creative expression.</li>
+                        </ul>
+                        <a href="gallery.php" class="cta-btn" style="margin-top: 15px;">View Our Event Gallery</a>
                     </div>
 
-                    <h2>A Foundation of Happiness</h2>
-                    <p>At Kings Court World School, we don’t just teach; we celebrate childhood. By integrating high-energy events with world-class early childhood pedagogy, we provide a sanctuary where every day is a new discovery. Choosing the right school means choosing a place where your child’s laughter is as important as their lessons.</p>
+                    <h3>4. Confidence Through Performance</h3>
+                    <p>From a very young age, our students are encouraged to participate in storytelling sessions, poem recitations, and musical performances. This exposure to public speaking at the best play school near Patrakar Colony Jaipur ensures that by the time they reach primary school, they are articulate and self-assured.</p>
 
+                    <h2>Conclusion</h2>
+                    <p>Education at Kings Court World School is a celebration of childhood. If you are looking for the best play school near Patrakar Colony Jaipur that prioritizes your child's happiness and confidence, look no further. We invite you to join our family and start your child's journey towards excellence today.</p>
+                    
+                    <p><strong>Visit us for a campus tour!</strong><br>
+                    Address: Plot no.- 5, Kings lane, Golyawas, Mansarovar, Jaipur<br>
+                    Phone: +91-76650 83556</p>
                 </div>
-
-                <!-- Share Buttons -->
-                
 
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <a href="index.html">
-                        <img src="/Footerlogo.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="tel:+917665083556"><i class="fa fa-phone"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="enquiry.html">Enroll Now</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Prospectus</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Plot no.- 5, Kings lane, Suraj Vatika, Golyawas, Vandemataram Circle, Mansarovar, Jaipur -302020</li>
-                    <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-76650 83556</li>
-                    <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> kingscourtworldschool@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>Copyright © 2026 Kings Court World School</p>
-        </div>
-    </footer>
+    <div id="footer-root"></div>
 
-    <!-- Mobile Menu Script -->
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Toggle dropdown on mobile click
-        const dropdownToggles = document.querySelectorAll('.nav-item > a');
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                if(window.innerWidth <= 992) {
-                    const dropdown = this.nextElementSibling;
-                    if(dropdown && dropdown.classList.contains('dropdown-menu')) {
-                        e.preventDefault();
-                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
 </body>
 </html>

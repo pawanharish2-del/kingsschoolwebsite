@@ -4,261 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
     <title>The Importance of Play-Based Learning | Kings Court World School</title>
+    
     <meta name="description" content="Discover the importance of play-based learning at Kings Court World School, Jaipur. Learn how structured and unstructured play enhances cognitive, social, and emotional development in early childhood.">
     <meta name="keywords" content="the best pre-school in Jaipur, modern playway learning, Top Play School, best pre-school in Jaipur, Best Preschool in Jaipur, Play School in Jaipur, Early Childhood Education, Best Play School in Mansarovar">
     <meta name="author" content="Kings Court World School">
     <meta name="robots" content="index, follow">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favKCWS.png">
     <link rel="apple-touch-icon" href="/favKCWS.png">
 
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <style>
-        :root {
-            /* Exact Google Logo Theme Colors - NO VARIATIONS */
-            --google-blue: #4285F4;
-            --google-red: #EA4335;
-            --google-yellow: #FBBC05;
-            --google-green: #34A853;
-            
-            /* Core Mapping */
-            --primary: var(--google-blue);
-            --secondary: var(--google-red);
-            --accent: var(--google-yellow);
-            
-            --dark: #202124;
-            --light: #F8F9FA;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Fredoka', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Bubblegum Sans', cursive;
-            letter-spacing: 1px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-
-        /* --- Top Bar --- */
-        .top-bar {
-            background-color: var(--primary);
-            color: white;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .top-bar a:hover { 
-            color: var(--accent); 
-        }
-
-        .top-bar-right.social-top { 
-            display: flex; 
-            gap: 15px; 
-        }
-
-        .top-bar-right.social-top a { 
-            font-size: 1.1rem; 
-        }
-
-        /* --- Navigation --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 5%;
-            background: rgba(255, 255, 255, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-
-        .logo { 
-            display: flex; 
-            align-items: center; 
-        }
-
-        .nav-links { 
-            display: flex; 
-            gap: 1.5rem; 
-            list-style: none; 
-            align-items: center; 
-        }
-
-        .nav-item { 
-            position: relative; 
-        }
-
-        .nav-item > a {
-            color: var(--dark); 
-            font-weight: 600; 
-            font-size: 1rem; 
-            padding: 10px 0; 
-            display: block;
-        }
-
-        .nav-item > a:hover { 
-            color: var(--google-red); 
-        }
-
-        .dropdown-menu {
-            display: none; 
-            position: absolute; 
-            top: 100%; 
-            left: 0; 
-            background: white;
-            min-width: 220px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-radius: 15px;
-            padding: 10px 0; 
-            z-index: 9999; 
-            border-top: 4px solid var(--google-green); 
-            list-style: none; 
-            margin: 0;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-item:hover .dropdown-menu { 
-            display: block; 
-            animation: fadeInUp 0.3s ease; 
-        }
-
-        .dropdown-menu li a { 
-            padding: 8px 20px; 
-            display: block; 
-            font-size: 0.9rem; 
-            color: #555; 
-        }
-
-        .dropdown-menu li a:hover { 
-            background: var(--light); 
-            color: var(--google-blue); 
-            padding-left: 25px; 
-        }
-
-        .cta-btn {
-            background-color: var(--primary); 
-            color: white !important; 
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px; 
-            font-weight: bold; 
-            box-shadow: 0 4px 0 rgba(0,0,0,0.2); 
-            display: inline-block;
-        }
-
-        .cta-btn:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 0 rgba(0,0,0,0.2); 
-        }
-
-        /* --- Sticky Sidebar --- */
-        #side-quick-links { 
-            position: fixed; 
-            right: 0; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            z-index: 999; 
-        }
-
-        #side-quick-links ul { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: flex-end; 
-            gap: 10px; 
-            list-style: none; 
-        }
-
-        #side-quick-links ul li {
-            background: var(--white); 
-            width: 50px; 
-            height: 50px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            box-shadow: -2px 5px 15px rgba(0,0,0,0.15); 
-            transition: all 0.3s;
-            border-top-left-radius: 25px; 
-            border-bottom-left-radius: 25px; 
-            overflow: hidden; 
-            cursor: pointer;
-        }
-
-        #side-quick-links ul li.call:hover { width: 200px; background: var(--google-blue); }
-        #side-quick-links ul li.marker:hover { width: 200px; background: var(--google-red); }
-        #side-quick-links ul li.whatapp:hover { width: 200px; background: var(--google-green); }
-        
-        #side-quick-links ul li a { 
-            display: flex; 
-            align-items: center; 
-            width: 100%; 
-            height: 100%; 
-            text-decoration: none; 
-        }
-
-        #side-quick-links ul li.call i { color: var(--google-blue); }
-        #side-quick-links ul li.marker i { color: var(--google-red); }
-        #side-quick-links ul li.whatapp i { color: var(--google-green); }
-        
-        #side-quick-links i { 
-            font-size: 1.2rem; 
-            min-width: 50px; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
-
-        #side-quick-links ul li:hover i { color: white; }
-        
-        #side-quick-links .content { 
-            white-space: nowrap; 
-            color: white; 
-            opacity: 0; 
-            transition: 0.3s; 
-        }
-
-        #side-quick-links ul li:hover .content { opacity: 1; }
+        /* --- Page Specific Styles (SEO) --- */
 
         /* --- Inner Banner --- */
         .inner-banner {
             position: relative; 
-            height: 35vh; 
-            min-height: 280px; 
+            height: auto; 
+            min-height: 250px; 
             background-color: var(--google-blue);
             display: flex; 
             align-items: center; 
@@ -267,7 +32,7 @@
             color: white; 
             overflow: hidden; 
             padding-top: 40px; 
-            padding-bottom: 70px;
+            padding-bottom: 50px; 
         }
 
         .inner-banner-content {
@@ -275,7 +40,7 @@
             position: relative; 
             animation: popIn 1s ease-out; 
             margin-bottom: 40px; 
-            max-width: 800px; 
+            max-width: 900px; 
             padding: 0 20px;
         }
 
@@ -287,12 +52,6 @@
             line-height: 1.2;
         }
 
-        .inner-banner p { 
-            font-size: 1.2rem; 
-            font-weight: 500; 
-        }
-
-        /* Banner Clouds */
         .cloud { 
             position: absolute; 
             background: white; 
@@ -367,14 +126,14 @@
         }
         
         .blog-single-container {
-            max-width: 1050px; /* Increased to cover the page well */
-            width: 95%; /* Make sure it scales on smaller screens */
+            max-width: 1050px; 
+            width: 95%; 
             margin: 0 auto;
             background: white;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             overflow: hidden;
-            margin-top: -80px; /* Pull up over the banner */
+            margin-top: -80px; 
             position: relative;
             z-index: 20;
             border-top: 6px solid var(--google-green);
@@ -388,7 +147,7 @@
         }
 
         .post-content-wrapper {
-            padding: 4rem 6rem; /* Increased padding for spacious feel */
+            padding: 4rem 6rem; 
         }
 
         .post-meta-header {
@@ -431,16 +190,16 @@
         }
 
         .post-body h3 {
-            font-size: 1.8rem; /* Adjusted for better visibility */
+            font-size: 1.8rem; 
             color: var(--google-blue); 
             margin: 2.5rem 0 1.2rem 0;
         }
 
         .post-body p {
-            font-size: 1.15rem; /* Slightly larger */
+            font-size: 1.15rem; 
             color: #444; 
-            margin-bottom: 1.8rem; /* Better spacing between paragraphs */
-            line-height: 1.9; /* Improved line height */
+            margin-bottom: 1.8rem; 
+            line-height: 1.9; 
             letter-spacing: 0.2px;
         }
 
@@ -473,7 +232,7 @@
 
         /* Highlight Box specifically for School mention */
         .school-highlight-box {
-            background: rgba(66, 133, 244, 0.08); /* Light Google Blue */
+            background: rgba(66, 133, 244, 0.08); 
             border: 2px solid var(--google-blue);
             padding: 2.5rem;
             border-radius: 15px;
@@ -525,343 +284,31 @@
             box-shadow: 0 5px 10px rgba(0,0,0,0.2); 
         }
 
-        /* --- Related Posts Grid (Reusing Original CSS) --- */
-        .related-posts-section { 
-            max-width: 1200px; 
-            margin: 4rem auto 0 auto; 
-        }
-
-        .related-posts-section h2 { 
-            text-align: center; 
-            font-size: 2.5rem; 
-            margin-bottom: 2rem; 
-            color: var(--dark); 
-        }
-
-        .blog-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 2.5rem; 
-        }
-
-        .blog-card {
-            background: white; 
-            border-radius: 20px; 
-            overflow: hidden; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s; 
-            display: flex; 
-            flex-direction: column; 
-            border-top: 5px solid transparent; 
-            position: relative;
-        }
-
-        .blog-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
-        }
-        
-        .blog-card:nth-child(4n+1) { border-top-color: var(--google-blue); }
-        .blog-card:nth-child(4n+1) .blog-tag { background: var(--google-blue); color: white; }
-        .blog-card:nth-child(4n+1) .read-more { color: var(--google-blue); }
-        
-        .blog-card:nth-child(4n+2) { border-top-color: var(--google-red); }
-        .blog-card:nth-child(4n+2) .blog-tag { background: var(--google-red); color: white; }
-        .blog-card:nth-child(4n+2) .read-more { color: var(--google-red); }
-        
-        .blog-card:nth-child(4n+3) { border-top-color: var(--google-yellow); }
-        .blog-card:nth-child(4n+3) .blog-tag { background: var(--google-yellow); color: var(--dark); }
-        .blog-card:nth-child(4n+3) .read-more { color: var(--google-yellow); }
-
-        .blog-img-container { 
-            width: 100%; 
-            height: 200px; 
-            position: relative; 
-            overflow: hidden; 
-        }
-
-        .blog-img-container img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            transition: transform 0.5s ease; 
-        }
-
-        .blog-card:hover .blog-img-container img { 
-            transform: scale(1.05); 
-        }
-
-        .blog-tag {
-            position: absolute; 
-            top: 15px; 
-            left: 15px; 
-            padding: 5px 15px; 
-            border-radius: 50px;
-            font-size: 0.8rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            z-index: 2;
-        }
-
-        .blog-content { 
-            padding: 1.5rem; 
-            display: flex; 
-            flex-direction: column; 
-            flex-grow: 1; 
-        }
-
-        .blog-meta { 
-            display: flex; 
-            gap: 15px; 
-            font-size: 0.85rem; 
-            color: #888; 
-            margin-bottom: 0.8rem; 
-        }
-
-        .blog-content h3 { 
-            font-family: 'Fredoka', sans-serif; 
-            font-size: 1.2rem; 
-            color: var(--dark); 
-            margin-bottom: 0.8rem; 
-        }
-
-        .read-more { 
-            font-weight: 600; 
-            font-size: 0.9rem; 
-            display: inline-flex; 
-            align-items: center; 
-            margin-top: auto; 
-        }
-
-        .read-more i { 
-            margin-left: 8px; 
-            transition: transform 0.3s; 
-        }
-
-        .blog-card:hover .read-more i { 
-            transform: translateX(5px); 
-        }
-
-        /* --- Footer --- */
-        footer { 
-            background-color: #4285f4; 
-            color: white; 
-            padding: 4rem 5% 2rem 5%; 
-            position: relative; 
-            margin-top: 0; 
-        }
-
-        .footer-wave { 
-            position: absolute; 
-            top: -1px; 
-            left: 0; 
-            width: 100%; 
-            overflow: hidden; 
-            line-height: 0; 
-        }
-
-        .footer-wave svg { 
-            display: block; 
-            width: calc(100% + 1.3px); 
-            height: 80px; 
-        }
-
-        .footer-wave path { 
-            fill: var(--light); 
-        }
-
-        .footer-content { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: space-between; 
-            gap: 2rem; 
-        }
-
-        .footer-col { 
-            flex: 1; 
-            min-width: 250px; 
-        }
-
-        .footer-col h3 { 
-            color: var(--google-yellow); 
-            margin-bottom: 1.5rem; 
-        }
-
-        .footer-col ul { 
-            list-style: none; 
-        }
-
-        .footer-col li { 
-            margin-bottom: 0.8rem; 
-        }
-
-        .footer-col a { 
-            color: #ccc; 
-        }
-
-        .footer-col a:hover { 
-            color: var(--google-yellow); 
-        }
-        
-        .social-links a {
-            display: inline-flex; 
-            width: 35px; 
-            height: 35px; 
-            background: rgba(255, 255, 255, 0.2); 
-            color: white; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            margin-right: 10px; 
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover { 
-            background: white; 
-            color: var(--google-blue); 
-            transform: translateY(-3px); 
-        }
-
-        .copyright {
-            text-align: center; 
-            margin-top: 3rem; 
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2); 
-            font-size: 0.9rem; 
-            color: #ffffff; 
-            opacity: 0.9;
-        }
-
-        /* Mobile Menu */
-        .hamburger { 
-            display: none; 
-            font-size: 1.8rem; 
-            cursor: pointer; 
-            color: var(--google-blue); 
-            margin-left: auto; 
-            padding-right: 10px; 
-        }
-
-        /* --- RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 992px) {
             .logo { max-width: 75%; } 
             .logo img { max-width: 100%; height: auto !important; }
-            .hamburger { display: block; margin-left: auto; padding-left: 15px; padding-right: 0; }
-            
-            .nav-links {
-                display: none; 
-                flex-direction: column; 
-                position: absolute;
-                top: 100%; 
-                left: 0; 
-                width: 100%; 
-                background: white; 
-                padding: 1rem 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active { display: flex; }
-            
-            .dropdown-menu { 
-                position: static; 
-                box-shadow: none; 
-                padding-left: 20px; 
-                border-top: none; 
-                background: #f9f9f9; 
-            }
-            
-            .top-bar { justify-content: space-between; padding: 10px 5%; }
-            .top-bar-right { display: none; }
         }
 
         @media (max-width: 768px) {
-            .section, footer { padding: 3rem 5%; }
+            .section { padding: 3rem 5%; }
             .inner-banner h1 { font-size: 2.2rem; }
             .blog-single-container { margin-top: -40px; }
             .post-content-wrapper { padding: 2rem; }
             .post-body h2 { font-size: 2rem; }
             .post-body p, .post-body ul { font-size: 1.05rem; }
-            #side-quick-links { display: none; }
             .school-highlight-box { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Floating Quick Links Sidebar -->
-    <div id="side-quick-links">
-        <ul>
-            <li class="call">
-                <a href="tel:+917665083556">
-                    <i class="fa fa-phone"></i>
-                    <div class="content">+91-76650 83556</div>
-                </a>
-            </li>
-            <li class="marker">
-                <a href="enquiry.html">
-                    <i class="fa fa-file-lines"></i>
-                    <div class="content">Apply Now</div>
-                </a>
-            </li>
-            <li class="whatapp">
-                <a href="https://wa.me/917665083556" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <div class="content">WhatsApp</div>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <div id="header-root"></div>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <a href="tel:+917665083556"><i class="fa fa-phone"></i> +91-76650 83556</a>
-        </div>
-        <div class="top-bar-right social-top">
-            <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">
-            <a href="/">
-                <img src="/logoKCWS.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-            </a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="about.html">About us</a></li>
-            <li class="nav-item">
-                <a href="javascript:void(0)">Programs <i class="fa fa-angle-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="playgroup_jal.html">Playgroup – Jal</a></li>
-                    <li><a href="nursery_agni.html">Nursery – Agni</a></li>
-                    <li><a href="junior_kg_vayu.html">Junior KG – Vayu</a></li>
-                    <li><a href="senior_kg_akash.html">Senior KG – Akash</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="enquiry.html">Admissions</a></li>
-            <li class="nav-item"><a href="gallery.php">Gallery</a></li>
-            <li class="nav-item"><a href="blog.html">Blogs</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
-            <li><a href="enquiry.html" class="cta-btn">Apply Online</a></li>
-        </ul>
-    </nav>
-
-    <!-- Inner Banner -->
     <section class="inner-banner">
         <div class="cloud one"></div>
         <div class="cloud two"></div>
         
         <div class="inner-banner-content">
             <h1>The Importance of Play-Based Learning</h1>
-            <p>Unlocking potential through creativity, exploration, and joy.</p>
         </div>
 
         <div class="wave-container">
@@ -871,139 +318,69 @@
         </div>
     </section>
 
-    <!-- Blog Content Section -->
     <section class="section">
         <div class="blog-single-container">
             
-            <!-- Featured Image -->
-            <img src="gallery/IMG_1933.jpg" alt="" class="post-featured-image">
+            <img src="gallery/IMG_5064.jpg" alt="Children playing with educational blocks" class="post-featured-image">
 
             <div class="post-content-wrapper">
                 
-                <!-- Post Meta Data -->
                 <div class="post-meta-header">
-                    <span class="post-tag">Education</span>
-                    <span><i class="far fa-calendar-alt"></i> March 11, 2026</span>
+                    <span class="post-tag">Education Guide</span>
                     <span><i class="far fa-user"></i> Admin / Academics Team</span>
-                    <span><i class="far fa-clock"></i> 5 Min Read</span>
+                    <span><i class="far fa-clock"></i> 6 Min Read</span>
                 </div>
 
-                <!-- Post Body text -->
                 <div class="post-body">
-                    <p>When you walk into a vibrant kindergarten classroom, you might see children building tall towers with colorful blocks, pretending to be doctors in a dramatic play corner, or getting their hands dirty with finger paints. To the untrained eye, it simply looks like they are "just playing." However, years of extensive psychological and educational research tell us a vastly different story. Play is, in fact, the serious work of childhood.</p>
-
-                    <h2>What Exactly is Play-Based Learning?</h2>
-                    <p>Play-based learning is an educational framework where children learn to make sense of the world around them through play. It is not merely a break from academic learning; it <em>is</em> the vehicle through which early academic concepts are naturally absorbed. It encompasses both structured play (guided by educators with specific learning outcomes) and unstructured, child-led free play.</p>
-
-                    <blockquote>"Play is the highest form of research." — Albert Einstein</blockquote>
-
-                    <h2>The Core Benefits of Learning Through Play</h2>
+                    <p>In many traditional educational settings, play is often viewed as a mere "break" from learning. However, modern research in early childhood development tells a very different story: <strong>Play IS the work of the child.</strong> For parents seeking the best pre-school in Jaipur, understanding the science behind play-based learning is crucial for ensuring their child receives a truly holistic foundation.</p>
                     
-                    <h3>1. Cognitive Development and Critical Thinking</h3>
-                    <p>When children engage in play, their brains are working in overdrive. Building a bridge out of blocks isn't just a physical activity; it requires an understanding of balance, gravity, and geometry. When the bridge falls, the child engages in problem-solving and critical thinking to figure out how to build it stronger the next time. Play introduces foundational math and science concepts in a tangible, hands-on way.</p>
+                    <h2>What is Play-Based Learning?</h2>
+                    <p>Play-based learning is a pedagogical approach where teachers use play as a vehicle for education. It isn't just "free time"; it's a carefully structured environment where children are encouraged to explore, experiment, and solve problems. At Kings Court World School, we refer to this as modern playway learning, where discovery is prioritized over rote memorization.</p>
 
-                    <h3>2. Social and Emotional Growth</h3>
-                    <p>Sharing toys, taking turns, and negotiating roles in a make-believe game are complex social tasks. Through interactive play, children learn empathy, how to resolve conflicts, and how to self-regulate their emotions. They learn how to read social cues and collaborate with their peers to achieve a common goal.</p>
+                    <h3>1. Cognitive Development through Unstructured Play</h3>
+                    <p>When a child builds a tower with blocks, they aren't just stacking wood. They are learning the fundamentals of physics, geometry, and engineering. They experiment with balance, identify shapes, and learn cause-and-effect when the tower falls. This "unstructured" exploration is the best way to build neural pathways that facilitate complex thinking later in life.</p>
 
-                    <h3>3. Language and Communication Skills</h3>
-                    <p>Whether they are explaining the rules of a game, acting out a story, or asking questions about a bug they found in the garden, play creates organic opportunities for language development. Children expand their vocabularies and learn the nuances of verbal and non-verbal communication while interacting with educators and classmates.</p>
+                    <h3>2. Social and Emotional Intelligence</h3>
+                    <p>Playing with peers is a masterclass in social navigation. Children learn to negotiate roles, share resources, resolve conflicts, and practice empathy. In a play-based classroom, a "disagreement" over a toy becomes a valuable teaching moment for emotional regulation and communication—skills that are far more important in the 21st century than just knowing the alphabet.</p>
 
-                    <h3>4. Physical Development and Fine Motor Skills</h3>
-                    <p>Physical development is intrinsically linked to play. Gross motor skills are honed when children run, jump, and climb on the playground, building strength, coordination, and cardiovascular health. Fine motor skills, essential for writing later on, are developed through activities like threading beads, using safety scissors, or molding clay. These seemingly simple activities build the small muscle control in their hands and fingers.</p>
-
-                    <h3>5. Fostering Creativity and Imagination</h3>
-                    <p>In a world that is rapidly changing, creativity is one of the most valuable skills a person can possess. Play allows children to think outside the box, invent new scenarios, and approach problems from unique angles. When a cardboard box becomes a spaceship or a pile of leaves becomes a magical potion, children are exercising their imaginative muscles, which lays the groundwork for innovative thinking in adulthood.</p>
-
-                    <h2>The Role of Educators as Facilitators</h2>
-                    <p>In a true play-based environment, the teacher is not a traditional lecturer but a skilled facilitator and keen observer. Educators carefully design the classroom space, providing open-ended materials that provoke curiosity. They step in to ask open-ended questions like, "I wonder what would happen if you added this block?" thereby extending the child's thinking without taking over the play. This guided discovery is a hallmark of high-quality early childhood education.</p>
+                    <h3>3. Language and Literacy Skills</h3>
+                    <p>Think about a child playing "doctor" or "market." They use vocabulary they’ve heard in the real world, narrate their actions, and engage in complex dialogue with their friends. This imaginative play dramatically improves linguistic fluency and provides a practical context for new words and concepts.</p>
 
                     <div class="school-highlight-box">
-                        <h3>How Kings Court World School Embraces Play</h3>
-                        <p>At <strong>Kings Court World School</strong>, we understand that early childhood is the most crucial period of human development. We do not believe in forcing rote memorization on young minds. Instead, our carefully curated programs—from <em>Playgroup (Jal)</em> to <em>Senior KG (Akash)</em>—are rooted deeply in the principles of play-based and experiential learning.</p>
-                        <p>Our educators act as facilitators, designing stimulating environments where children feel safe to explore, question, and create. Whether it is sensory sand-play in our <em>Agni</em> nursery or complex puzzle-solving in <em>Vayu</em>, the <strong>Kings Court World School</strong> curriculum ensures that your child is developing holistic skills—cognitive, physical, and emotional—all while experiencing the pure joy of childhood.</p>
-                        <a href="enquiry.html" class="cta-btn" style="margin-top: 15px;">Explore Our Programs</a>
+                        <h3>Our Approach at Kings Court World School</h3>
+                        <p>As a <strong>Top Play School in Mansarovar</strong>, Kings Court World School integrates play into every facet of our curriculum. Whether it’s through the Reggio Emilia approach in our art studio or Montessori-inspired tactile learning in our classrooms, we ensure that the "spark" of childhood is used as the fuel for academic excellence.</p>
+                        <ul>
+                            <li><strong>State-of-the-Art Play Zones:</strong> Including safe, AC-integrated indoor and outdoor arenas.</li>
+                            <li><strong>Expert Mentors:</strong> Dedicated facilitators who guide play into productive learning.</li>
+                            <li><strong>Holistic Balance:</strong> Merging the Finnish education spirit with deep-rooted Indian values.</li>
+                        </ul>
                     </div>
 
-                    <h2>Preparing for the Future</h2>
-                    <p>The skills fostered through play-based learning—creativity, adaptability, teamwork, and resilience—are exactly the 21st-century skills needed for future success. By prioritizing play in the early years, we aren't delaying "real learning"; we are building a stronger, broader foundation for all future academic endeavors.</p>
+                    <h2>The Long-Term Benefits</h2>
+                    <p>Studies consistently show that children who attend play-based preschools grow into more creative, resilient, and socially adept adults. They don't just "know" facts; they know how to find information and work with others. This is why choosing the <strong>Best Preschool in Jaipur</strong> matters—it’s not just about the next school; it’s about the next decade.</p>
 
-                    <p>As parents and educators, the best thing we can do is provide the time, space, and resources for children to immerse themselves in play. Let them get messy, let them ask a hundred questions, and let them lead the way.</p>
+                    <h2>Final Thoughts</h2>
+                    <p>Your child's first years are precious. Don't rush them into rigid academics. Let them play, let them explore, and let them wonder. At Kings Court World School, we are committed to providing the ultimate play-based environment where every giggle is a sign of growth.</p>
+                    
+                    <p><strong>Contact us to learn more about our innovative Playway methodologies!</strong><br>
+                    Phone: +91-76650 83556<br>
+                    Location: Golyawas, Mansarovar, Jaipur</p>
                 </div>
 
-                <!-- Share Buttons -->
-             
+                <div class="post-share">
+                    <h4>Share this article:</h4>
+                    <a href="#" class="share-btn share-fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-btn share-tw"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-btn share-wa"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <a href="index.html">
-                        <img src="/Footerlogo.png" alt="Kings Court World School Logo" style="height: 50px; width: auto; object-fit: contain;">
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/kingscourtworldschool/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/kingscourtworldschool/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@KINGSCOURTWORLDSCHOOL" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="tel:+917665083556"><i class="fa fa-phone"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="enquiry.html">Enroll Now</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Prospectus</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Plot no.- 5, Kings lane, Suraj Vatika, Golyawas, Vandemataram Circle, Mansarovar, Jaipur -302020</li>
-                    <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-76650 83556</li>
-                    <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> kingscourtworldschool@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>Copyright © 2026 Kings Court World School</p>
-        </div>
-    </footer>
+    <div id="footer-root"></div>
 
-    <!-- Mobile Menu Script -->
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Toggle dropdown on mobile click
-        const dropdownToggles = document.querySelectorAll('.nav-item > a');
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                if(window.innerWidth <= 992) {
-                    const dropdown = this.nextElementSibling;
-                    if(dropdown && dropdown.classList.contains('dropdown-menu')) {
-                        e.preventDefault();
-                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/components.js"></script>
 </body>
 </html>
